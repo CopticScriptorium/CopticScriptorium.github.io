@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Coptic Scriptorium</title>
+	<link rel="stylesheet" href="scriptorium.css" type="text/css" charset="utf-8"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script> 
+    $(function(){
+      $("#navbar").load("nav.html");
+      $("#topbanner").load("top.html");
+      $("#bottomcontent").load("bottom.html"); 
+    });
+  </script> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55145025-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/asul:n4:default.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+<!-- Navbar  -->
+<div id="navbar"></div>
+
+<div id="wrapper">
+<div id="topbanner"></div>
+
+
+<div id="content">     
+<h2>Tools</h2>
+<p>
+	Some of the tools below use a Sahidic Coptic lexicon based on data kindly provided by Prof. Tito Orlandi and the <a href="http://cmcl.let.uniroma1.it/">CMCL</a> project.
+	When using the part-of-speech tagging models or the tokenization script and its lexicon please make sure to refer back to
+	the CMCL project.
+</p>
+<h3>Part-of-Speech Tagging</h3>
+<ul>
+<li>Scripts and models
+	<ul>
+		<li><a href="https://github.com/CopticScriptorium/Tokenizers/releases/latest" target="new">Tokenization script and lexicon</a> (assumes normalized Coptic, see tokenization guidelines)</li>
+		<li><a href="http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/" target="new">TreeTagger</a> - an open source part-of-speech tagger (<a href="http://www.smo.uhi.ac.uk/~oduibhin/oideasra/interfaces/winttinterface.htm" target="new">additional Windows interface WinTreeTagger</a>)</li>
+		<li><a href="https://github.com/CopticScriptorium/Tagger-Part-of-Speech/releases/latest" target="new">Coptic TreeTagger training models</a> - for the fine and coarse grained tagsets (see tagging guidelines below)</li>
+	</ul></li>
+<li>Documentation
+  <ul>
+    <li><a href="http://www.copticscriptorium.org/download/tools/SCRIPTORIUMDiplTranscriptionGuidelines.pdf" target="new">Diplomatic Transcription Guidelines</a>(version 1.1.0)</li>
+    <li>Tokenization Guidelines (see sections 3 &amp; 4 of the Transcription Guidelines)</li>
+    <li><a href="http://www.copticscriptorium.org/download/tools/scriptorium_tagset_documentation.pdf" target="new">Part-of-Speech Tagging Guidelines (version 1.1.0)</a></li>
+    </ul>
+</li>
+</ul>
+<h3>Additional Annotation Tools</h3>
+<ul>
+  <li><a href="https://github.com/CopticScriptorium/normalizer/releases/latest" target="_blank">Normalizer</a> (normalizes orthography, removes diacritics)</li>
+  <li><a href="https://github.com/CopticScriptorium/lexical-taggers/releases/tag/1.22" target="_blank">Language of origin tagger</a> (to annotate loan words from Greek, Latin, Hebrew/Greco-Hebrew, Aramaic)</li>
+</ul>
+<h3>Converters</h3>
+<ul>
+	<li>Coptic encoding converter (converts older text character systems used for fonts such as Coptic and Laser Coptic into standards-compliant Coptic Unicode characters)
+      <ul>
+        <li>Simple recoding script in Perl (supports CMCL, Laser Coptic and UTF-8 encoding conversion)</li>
+        <li>Converter for ASCII encoding / UTF-8 of Dirk Van Damme and Gregor Wurst</li>
+        <li><a href="https://github.com/CopticScriptorium/converters/releases/latest" target="_blank">Download both converters</a></li>
+      </ul>
+	</li>
+	<li><a href="https://korpling.german.hu-berlin.de/p/projects/saltnpepper/wiki/" target="new">SaltNPepper</a> - a metamodel based Java framework for multi-format conversion </li>
+  <li><a href="http://www.exmaralda.org/exceladdin.html">Excel-Plugin</a> for importing and exporting EXMARaLDA XML, SGML, PAULA XML and subsets of TEI XML</li>
+
+</ul>
+</div>
+
+<!-- Bottom Content -->
+    <div id="bottomcontent"></div>
+
+</body>
+    </html>   

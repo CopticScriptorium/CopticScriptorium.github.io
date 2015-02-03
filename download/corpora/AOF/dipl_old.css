@@ -1,0 +1,15 @@
+.htmlvis {
+font-family: Antinoou, sans-serif;
+counter-reset: line 0;
+}
+div.line:nth-of-type(5n):before{content:counter(line)" "}
+div.line:nth-of-type(5){text-indent:10px;}
+div.line{display: block; white-space:nowrap; counter-increment: line ; height: 22px}
+#div.line{text-indent:20px;}
+div.line:not(:nth-of-type(5n)){text-indent:20px;}
+#.pos{color:red; font-weight: normal}
+#.translation:hover{color: blue;}
+#.rend{font-size: x-large;}
+#.person{color:red;}
+.pb{border-style:solid;}
+.cb{vertical-align: top; counter-reset: line 0; width:180px}#position:float-left;}

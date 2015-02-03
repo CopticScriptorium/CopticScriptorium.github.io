@@ -1,0 +1,556 @@
+<?oxygen RNGSchema="http://www.stoa.org/epidoc/schema/latest" ?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest" ?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+<fileDesc>
+<titleStmt>
+<title>Apophthegmata Patrum Sahidic 216: Besarion</title>
+<author>anonymous</author>
+</titleStmt>
+<publicationStmt>
+<availability>
+    <licence target="http://creativecommons.org/licenses/by/3.0/">Licensed under a Creative Commons-Attribution 3.0 licence.</licence>
+    <licence target="http://coptic.pacific.edu">Coptic SCRIPTORIUM</licence>
+</availability>
+</publicationStmt>
+<sourceDesc>
+    <msDesc>
+        <!--description of the entire manuscript codex-->
+        <msIdentifier>
+            <!--manuscript name corresponds to Tito Orlandi's and the CMCL's catalogue identifiers for White Monastery manuscripts-->
+            <msName>MONB.EG</msName>
+            <!--need altidno or other tag for Trismegistos number with link-->
+        </msIdentifier>
+        <!--need way to identify that this codex is a copy of the AP-->
+        <history>
+            <origin>
+                <objectType>Codex</objectType>
+                <country>Egypt</country>
+                <placeName>Atripe</placeName>
+                <origPlace>White Monastery</origPlace>
+                <origDate> </origDate>
+            </origin>
+        </history>
+        <!--information about this fragment at its current repository-->
+        <msPart>
+            <msIdentifier>
+                <repository>Biblioteca Nazionale di Napoli</repository>
+                <collection>Borgia Collection</collection> 
+                <idno>IB17 484 f. 48r</idno>
+            </msIdentifier>
+            <msContents>
+                <msItem>
+                    <locus scheme="EG" from="267" to="267">267</locus>
+                    <locus scheme="ChaineNumbering" from="216" to="216">216</locus>
+                    <textLang mainLang="cop">Sahidic Coptic</textLang>
+                    <incipit></incipit>
+                    <title></title>
+                </msItem>
+            </msContents>
+        </msPart>
+    </msDesc>
+    <listBibl>
+        <bibl>
+            <author>Marius<surname>Chaîne</surname></author>
+            <title level="m">Le manuscrit de la version Copte en dialecte Sahidique des Apophthegmata Patrum</title>.
+            <pubPlace>Cairo</pubPlace>
+            <publisher>l’Institut français d’archéologie orientale</publisher>
+            <date>1960</date>
+        </bibl>
+    </listBibl>
+</sourceDesc>
+</fileDesc>
+    <encodingDesc>
+        <p>This file is encoded to comply with EpiDoc Guidelines and Schema.<ref>http://www.stoa.org/epidoc/gl/5</ref></p>
+    </encodingDesc>
+<profileDesc>
+    <langUsage>
+        <!--need an identifier for SAHIDIC dialect-->
+        <language ident="cop">Sahidic Coptic</language>
+    </langUsage>
+<creation>
+<title>Apophthegmata Patrum</title>
+</creation>
+</profileDesc>
+<revisionDesc>
+<change n="1.0.1" who="JanetTimbie" when="2013-05-10">diplomatic text annotations</change>
+<change n="1.0.1" who="AmirZeldes" when="2013-05-10">text annotations, translation</change>
+<change n="1.0.1" who="CarolineTSchroeder" when="2013-05-10">annotations, metadata</change>
+<change n="1.0.2" who="CarolineTSchroeder" when="2013-09-10">annotations, metadata</change>
+<change n="1.0.2" who="LaurenMcDermott" when="2013-09-10">metadata</change>
+    <change n="1.0.2" who="AmirZeldes" when="2013-09-10">linguistic annotations</change>
+    <change n="1.0.3" who="CarolineTSchroeder" when="2014-01-07">edited metadata for standardization</change>
+        <change n="1.1.0" who="AmirZeldes" when="2014-03-25">updated phr segmentation, added m morpheme analysis where relevant</change>
+</revisionDesc>
+</teiHeader>
+<text>
+<body>
+<ab>
+<lb n="6"/><phr>
+<w type="APST" lemma="ⲁ">
+Ⲁ</w>
+<w type="PPERS" lemma="ϥ">
+ϥ</w>
+<w type="V" lemma="ϫⲟⲟ">
+ϫⲟⲟ</w>
+<w type="PPERO" lemma="ⲥ">
+ⲥ</w>
+</phr>
+<phr>
+<w type="PTC" lemma="ⲛϭⲓ">
+ⲛϭⲓ</w>
+<lb n="7"/><w type="N" lemma="ⲁⲡⲁ" xml:lang="Hebrew">
+ⲁ̇ⲡⲁ</w>
+</phr>
+<phr>
+<w type="NPROP" lemma="ⲇⲟⲩⲗⲟⲥ">
+ⲇⲟⲩⲗⲟⲥ</w>
+</phr>
+<phr>
+<w type="ART" lemma="ⲡ">
+ⲡ̇</w>
+<w type="N" lemma="ⲙⲁⲑⲏⲧⲏⲥ" xml:lang="Greek">
+ⲙⲁ<lb n="8"/>ⲑⲏⲧⲏⲥ</w>
+</phr>
+<phr>
+<w type="PREP" lemma="ⲛ">
+ⲛ</w>
+<w type="N" lemma="ⲁⲡⲁ" xml:lang="Hebrew">
+ⲁⲡⲁ</w>
+</phr>
+<phr>
+<w type="NPROP" lemma="ⲃⲏⲥⲁⲣⲓⲟⲛ">
+ⲃⲏⲥⲁ<lb n="9"/>ⲣⲓ̈ⲟⲛ</w>
+</phr>
+<phr>
+<w type="PUNCT" lemma="·">
+·</w>
+</phr>
+<phr>
+<w type="CONJ" lemma="ϫⲉ">
+ϫⲉ</w>
+<w type="CCIRC" lemma="ⲉ">
+ⲉ̇</w>
+<w type="PPERS" lemma="ⲛ">
+ⲛ</w>
+<w type="V" lemma="ⲙⲟⲟϣⲉ">
+ⲙⲟ̇ⲟ<lb n="10"/>ϣⲉ</w>
+</phr>
+<phr>
+<w type="PREP" lemma="ϩⲁϩⲧⲛ">
+ϩⲁϩⲧⲛ̇</w>
+<w type="ART" lemma="ⲧ">
+ⲑ</w>
+<w type="N" lemma="ϩⲁⲗⲁⲥⲥⲁ" xml:lang="Greek">
+ⲁⲗⲁⲥⲥⲁ</w>
+</phr>
+<lb n="11"/><phr>
+<w type="CONJ" lemma="ⲁⲩⲱ">
+ⲁⲩⲱ̇</w>
+</phr>
+<phr>
+<w type="APST" lemma="ⲁ">
+ⲁ</w>
+<w type="PPERS" lemma="ⲓ">
+ⲓ̇</w>
+<w type="V" lemma="ⲉⲓⲃⲉ">
+ⲉⲓ̇ⲃⲉ</w>
+</phr>
+<phr>
+<w type="PUNCT" lemma="·">
+·</w>
+</phr>
+<phr>
+<w type="APST" lemma="ⲁ">
+ⲁ</w>
+<w type="PPERS" lemma="ⲓ">
+ⲓ̈</w>
+<lb n="12"/><w type="V" lemma="ϫⲟⲟ">
+ϫⲟⲟ̇</w>
+<w type="PPERO" lemma="ⲥ">
+ⲥ</w>
+</phr>
+<phr>
+<w type="PREP" lemma="ⲛ">
+ⲛ</w>
+<w type="N" lemma="ⲁⲡⲁ" xml:lang="Hebrew">
+ⲁⲡⲁ</w>
+</phr>
+<phr>
+<w type="NPROP" lemma="ⲃⲏⲥⲁⲣⲓⲟⲛ">
+ⲃⲏⲥⲁⲣⲓ̈ⲟⲛ</w>
+</phr>
+<lb n="13"/><phr>
+<w type="CONJ" lemma="ϫⲉ">
+ϫⲉ</w>
+<w type="PPOS" lemma="ⲡⲁ">
+ⲡⲁ</w>
+<w type="N" lemma="ⲉⲓⲱⲧ">
+ⲉⲓ̇ⲱⲧ</w>
+</phr>
+<phr>
+<w type="PPERS" lemma="ϯ">
+ϯ̇</w>
+<w type="VSTAT" lemma="ⲟⲃⲉ">
+ⲟ̇ⲃⲉ</w>
+</phr>
+<phr>
+<w type="ADV" lemma="ⲧⲟⲛⲟⲩ">
+ⲧⲟ<lb n="14"/>ⲛⲟⲩ</w>
+</phr>
+<phr>
+<w type="PUNCT" lemma=".">
+.</w>
+</phr>
+<phr>
+<w type="ART" lemma="ⲡ">
+ⲡ̇</w>
+<w type="N" lemma="ϩⲗⲗⲟ">
+ϩⲗ̇ⲗⲟ</w>
+</phr>
+<phr>
+<w type="PTC" lemma="ⲇⲉ" xml:lang="Greek">
+ⲇⲉ</w>
+</phr>
+<lb n="15"/><phr>
+<w type="APST" lemma="ⲁ">
+Ⲁ</w>
+<w type="PPERS" lemma="ϥ">
+ϥ</w>
+<w type="V" lemma="ϣⲗⲏⲗ">
+ϣ̇ⲗⲏⲗ</w>
+</phr>
+<phr>
+<w type="VBD" lemma="ⲡⲉϫⲁ">
+ⲡⲉϫⲁ</w>
+<w type="PPERS" lemma="ϥ">
+ϥ</w>
+</phr>
+<phr>
+<w type="PREP" lemma="ⲛⲁ">
+ⲛⲁ</w>
+<w type="PPERO" lemma="ⲓ">
+ⲓ̇</w>
+</phr>
+<lb n="16"/><phr>
+<w type="CONJ" lemma="ϫⲉ">
+ϫⲉ</w>
+<w type="VIMP" lemma="ⲥⲱ">
+ⲥⲱ̇</w>
+</phr>
+<phr>
+<w type="PREP" lemma="ⲛⲁ">
+ⲛⲁ</w>
+<w type="PPERO" lemma="ⲕ">
+ⲕ</w>
+</phr>
+<phr>
+<w type="PREP" lemma="ϩⲛ">
+ϩⲛ̇</w>
+<w type="ART" lemma="ⲧ">
+ⲑ</w>
+<w type="N" lemma="ϩⲁⲗⲁⲥⲥⲁ" xml:lang="Greek">
+ⲁⲗⲁⲥ<lb n="17"/>ⲥⲁ</w>
+</phr>
+<phr>
+<w type="PUNCT" lemma="·">
+·</w>
+</phr>
+<phr>
+<w type="CONJ" lemma="ⲁⲩⲱ">
+ⲁⲩⲱ̇</w>
+</phr>
+<phr>
+<w type="ART" lemma="ⲡ">
+ⲡ̇</w>
+<w type="N" lemma="ⲙⲟⲟⲩ">
+ⲙⲟⲟⲩ</w>
+</phr>
+<phr>
+<w type="VSTAT" lemma="ϩⲟⲗϭ">
+ϩⲟⲗϭ̇</w>
+</phr>
+<phr>
+<w type="PUNCT" lemma=".">
+.</w>
+</phr>
+<lb n="18"/><phr>
+<w type="PPERI" lemma="ⲁⲛⲟⲕ">
+ⲁ̇ⲛⲟⲕ</w>
+</phr>
+<phr>
+<w type="PTC" lemma="ⲇⲉ" xml:lang="Greek">
+ⲇⲉ</w>
+</phr>
+<phr>
+<w type="APST" lemma="ⲁ">
+ⲁ</w>
+<w type="PPERS" lemma="ⲓ">
+ⲓ̇</w>
+<w type="V" lemma="ⲥⲱ">
+ⲥⲱ</w>
+</phr>
+<phr>
+<w type="PUNCT" lemma="·">
+·</w>
+<w>
+ⲻ</w>
+</phr>
+<lb n="19"/><phr>
+<w type="CONJ" lemma="ⲁⲩⲱ">
+Ⲁⲩⲱ̇</w>
+</phr>
+<phr>
+<w type="APST" lemma="ⲁ">
+ⲁ</w>
+<w type="PPERS" lemma="ⲓ">
+ⲓ̇</w>
+<w type="V" lemma="ϯ">
+ϯ̇</w>
+</phr>
+<phr>
+<w type="PREP" lemma="ⲛ">
+ⲛ</w>
+<w type="ART" lemma="ⲟⲩ">
+ⲟⲩ</w>
+<w type="N" lemma="ϣⲏⲙ">
+ϣⲏⲙ</w>
+</phr>
+<lb n="20"/><phr>
+<w type="PREP" lemma="ⲙ">
+ⲙ̇</w>
+<w type="N" lemma="ⲙⲟⲟⲩ">
+ⲙⲟⲟⲩ</w>
+</phr>
+<phr>
+<w type="PREP" lemma="ⲉ">
+ⲉ̇</w>
+<w type="PPOS" lemma="ⲡⲁ">
+ⲡⲁ</w>
+<w type="N" lemma="ⲁⲅⲅⲏⲛ" xml:lang="Greek">
+ⲁ̇ⲅⲅⲏⲛ</w>
+</phr>
+<lb n="21"/><phr>
+<w type="CREL" lemma="ⲉⲧ">
+ⲉ̇ⲧ</w>
+<w type="PREP" lemma="ⲛ">
+̇ⲛ̇</w>
+<w type="N" lemma="ⲧⲟⲟⲧ">
+ⲧⲟⲟⲧ</w>
+</phr>
+<phr>
+<w type="PUNCT" lemma="·">
+·</w>
+</phr>
+<phr>
+<w type="CCIRC" lemma="ⲉ">
+ⲉ</w>
+<w type="PPERS" lemma="ⲓ">
+ⲓ̇</w>
+<w type="V" lemma="ϫⲱ">
+ϫⲱ</w>
+</phr>
+<phr>
+<w type="PREP" lemma="ⲙⲙⲟ">
+ⲙ̇<lb n="22"/>ⲙⲟ</w>
+<w type="PPERO" lemma="ⲥ">
+ⲥ</w>
+</phr>
+<phr>
+<w type="CONJ" lemma="ϫⲉ">
+ϫⲉ</w>
+<w type="CONJ" lemma="ⲙⲏⲡⲟⲧⲉ" xml:lang="Greek">
+ⲙⲏⲡⲟⲧⲉ̇</w>
+</phr>
+<phr>
+<w type="ACONJ_PPERS" lemma="ⲧⲁ">
+ⲧⲁ</w>
+<lb n="23"/><w type="V" lemma="ⲉⲓⲃⲉ">
+ⲉⲓ̇ⲃⲉ</w>
+</phr>
+<phr>
+<w type="ADV" lemma="ⲟⲛ">
+ⲟ̇ⲛ</w>
+</phr>
+<phr>
+<w type="PUNCT" lemma=".">
+.</w>
+</phr>
+<phr>
+<w type="ART" lemma="ⲡ">
+ⲡ̇</w>
+<w type="N" lemma="ϩⲗⲗⲟ">
+ϩⲗ̇ⲗⲟ</w>
+</phr>
+<lb n="24"/><phr>
+<w type="PTC" lemma="ⲇⲉ" xml:lang="Greek">
+Ⲇⲉ</w>
+</phr>
+<phr>
+<w type="APREC" lemma="ⲛⲧⲉⲣⲉ">
+ⲛ̇ⲧⲉⲣⲉ</w>
+<w type="PPERS" lemma="ϥ">
+ϥ</w>
+<w type="V" lemma="ⲛⲁⲩ">
+ⲛⲁⲩ</w>
+</phr>
+<phr>
+<w type="VBD" lemma="ⲡⲉϫⲁ">
+ⲡⲉϫⲁ</w>
+<w type="PPERS" lemma="ϥ">
+ϥ</w>
+</phr>
+<lb n="25"/><phr>
+<w type="PREP" lemma="ⲛⲁ">
+ⲛⲁ</w>
+<w type="PPERO" lemma="ⲓ">
+ⲓ̇</w>
+</phr>
+<phr>
+<w type="CONJ" lemma="ϫⲉ">
+ϫⲉ</w>
+<w type="PREP" lemma="ⲉⲧⲃⲉ">
+ⲉ̇ⲧⲃⲉ</w>
+<w type="PINT" lemma="ⲟⲩ">
+ⲟⲩ</w>
+</phr>
+<phr>
+<w type="APST" lemma="ⲁ">
+ⲁ̇</w>
+<w type="PPERS" lemma="ⲕ">
+ⲕ</w>
+<w type="V" lemma="ⲙⲉϩ">
+ⲙⲉϩ</w>
+</phr>
+<lb n="26"/><phr>
+<w type="N" lemma="ⲙⲟⲟⲩ">
+ⲙⲟⲟⲩ</w>
+</phr>
+<phr>
+<w type="PUNCT" lemma=".">
+.</w>
+</phr>
+<phr>
+<w type="VBD" lemma="ⲡⲉϫⲁ">
+ⲡⲉϫⲁ</w>
+<w type="PPERS" lemma="ⲓ">
+ⲓ̇</w>
+</phr>
+<phr>
+<w type="CONJ" lemma="ϫⲉ">
+ϫⲉ</w>
+<lb n="27"/><w type="VIMP" lemma="ⲕⲱ">
+ⲕⲱ</w>
+</phr>
+<phr>
+<w type="PREP" lemma="ⲛⲁ">
+ⲛⲁ</w>
+<w type="PPERO" lemma="ⲓ">
+ⲓ̇</w>
+</phr>
+<phr>
+<w type="ADV" lemma="ⲉⲃⲟⲗ">
+ⲉⲃⲟⲗ</w>
+</phr>
+<phr>
+<w type="PUNCT" lemma="·">
+·</w>
+</phr>
+<phr>
+<w type="CONJ" lemma="ϫⲉ">
+ϫⲉ</w>
+<lb n="28"/><w type="CONJ" lemma="ⲙⲏⲡⲟⲧⲉ" xml:lang="Greek">
+ⲙⲏⲡⲟⲧⲉ</w>
+</phr>
+<phr>
+<w type="ACONJ_PPERS" lemma="ⲧⲁ">
+ⲧⲁ</w>
+<w type="V" lemma="ⲉⲓⲃⲉ">
+ⲉⲓ̇ⲃⲉ</w>
+</phr>
+<phr>
+<w type="PREP" lemma="ⲙ">
+ⲙ̇</w>
+<lb n="29"/><w type="PDEM" lemma="ⲡⲉⲓ">
+ⲡⲉⲓ̇</w>
+<w type="N" lemma="ⲥⲁ">
+ⲥⲁ</w>
+</phr>
+<phr>
+<w type="PUNCT" lemma=".">
+.</w>
+<w>
+ⲻ</w>
+</phr>
+<lb n="30"/><phr>
+<w type="VBD" lemma="ⲡⲉϫⲉ">
+Ⲡⲉϫⲉ</w>
+</phr>
+<phr>
+<w type="ART" lemma="ⲡ">
+ⲡ̇</w>
+<w type="N" lemma="ϩⲗⲗⲟ">
+ϩⲗ̇ⲗⲟ</w>
+</phr>
+<phr>
+<w type="PREP" lemma="ⲛⲁ">
+ⲛⲁ</w>
+<w type="PPERO" lemma="ⲓ">
+ⲓ̇</w>
+</phr>
+<phr>
+<w type="CONJ" lemma="ϫⲉ">
+ϫⲉ</w>
+<lb n="31"/><w type="ART" lemma="ⲡ">
+ⲡ̇</w>
+<w type="N" lemma="ⲛⲟⲩⲧⲉ">
+ⲛⲟⲩⲧⲉ</w>
+</phr>
+<phr>
+<w type="PREP" lemma="ⲙ">
+ⲙ̇</w>
+<w type="PDEM" lemma="ⲡⲉⲓ">
+ⲡⲉⲓ̇</w>
+<w type="N" lemma="ⲙⲁ">
+ⲙⲁ</w>
+</phr>
+<phr>
+<w type="PUNCT" lemma="·">
+·</w>
+</phr>
+<phr>
+<w type="PPERI" lemma="ⲛⲧⲟϥ">
+ⲛ̇<lb n="32"/>ⲧⲟ</w>
+<w>
+ϥ</w>
+</phr>
+<phr>
+<w type="ADV" lemma="ⲟⲛ">
+ⲟ̇ⲛ</w>
+</phr>
+<phr>
+<w type="COP" lemma="ⲡⲉ">
+ⲡⲉ</w>
+</phr>
+<phr>
+<w type="ART" lemma="ⲡ">
+ⲡ</w>
+<w type="N" lemma="ⲛⲟⲩⲧⲉ">
+ⲛⲟⲩⲧⲉ</w>
+</phr>
+<lb n="33"/><phr>
+<w type="PREP" lemma="ⲙ">
+ⲙ̇</w>
+<w type="PDEM" lemma="ⲡⲉⲓ">
+ⲡ̇ⲉⲓ̇</w>
+<w type="N" lemma="ⲥⲁ">
+ⲥⲁ</w>
+</phr>
+<phr>
+<w type="PUNCT" lemma=".">
+.</w>
+</phr>
+<cb/><pb/></ab>
+</body>
+</text>
+</TEI>

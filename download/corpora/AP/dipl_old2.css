@@ -1,0 +1,69 @@
+.htmlvis {
+font-family: Antinoou, sans-serif;
+counter-reset: line 0;
+}
+div.line[line="1"]{text-indent:20px;}
+div.line[line="2"]{text-indent:20px;}
+div.line[line="3"]{text-indent:20px;}
+div.line[line="4"]{text-indent:20px;}
+div.line[line="5"]:before{content:attr(line)" "}
+div.line[line="5"]{text-indent:10px;}
+div.line[line="6"]{text-indent:20px;}
+div.line[line="7"]{text-indent:20px;}
+div.line[line="8"]{text-indent:20px;}
+div.line[line="9"]{text-indent:20px;}
+div.line[line="10"]:before{content:attr(line)" "}
+div.line[line="11"]{text-indent:20px;}
+div.line[line="12"]{text-indent:20px;}
+div.line[line="13"]{text-indent:20px;}
+div.line[line="14"]{text-indent:20px;}
+div.line[line="15"]:before{content:attr(line)" "}
+div.line[line="16"]{text-indent:20px;}
+div.line[line="17"]{text-indent:20px;}
+div.line[line="18"]{text-indent:20px;}
+div.line[line="19"]{text-indent:20px;}
+div.line[line="20"]:before{content:attr(line)" "}
+div.line[line="21"]{text-indent:20px;}
+div.line[line="22"]{text-indent:20px;}
+div.line[line="23"]{text-indent:20px;}
+div.line[line="24"]{text-indent:20px;}
+div.line[line="25"]:before{content:attr(line)" "}
+div.line[line="26"]{text-indent:20px;}
+div.line[line="27"]{text-indent:20px;}
+div.line[line="28"]{text-indent:20px;}
+div.line[line="29"]{text-indent:20px;}
+div.line[line="30"]:before{content:attr(line)" "}
+div.line[line="31"]{text-indent:20px;}
+div.line[line="32"]{text-indent:20px;}
+div.line[line="33"]{text-indent:20px;}
+div.line[line="34"]{text-indent:20px;}
+div.line[line="35"]:before{content:attr(line)" "}
+div.line[line="36"]{text-indent:20px;}
+div.line[line="37"]{text-indent:20px;}
+div.line[line="38"]{text-indent:20px;}
+div.line[line="39"]{text-indent:20px;}
+div.line[line="40"]:before{content:attr(line)" "}
+div.line[line="41"]{text-indent:20px;}
+div.line[line="42"]{text-indent:20px;}
+div.line[line="43"]{text-indent:20px;}
+div.line[line="44"]{text-indent:20px;}
+div.line[line="45"]:before{content:attr(line)" "}
+div.line[line="46"]{text-indent:20px;}
+div.line[line="47"]{text-indent:20px;}
+div.line[line="48"]{text-indent:20px;}
+div.line[line="49"]{text-indent:20px;}
+div.line[line="50"]:before{content:attr(line)" "}
+
+/*div.line:nth-of-type(5n):before{content:attr(line)" "}
+div.line:nth-of-type(1){counter-reset: line attr(line);}
+div.line:nth-of-type(5n):before{content:counter(line)" "}
+div.line:nth-of-type(5){text-indent:10px;}*/
+div.line{display: block; white-space:nowrap; counter-increment: line ; height: 22px}
+#div.line{text-indent:20px;}
+/*div.line:not(:nth-of-type(5n)){text-indent:20px;}*/
+#.pos{color:red; font-weight: normal}
+#.translation:hover{color: blue;}
+#.rend{font-size: x-large;}
+#.person{color:red;}
+.pb{border-style:solid;}
+.cb{border-style:none; vertical-align: top; counter-reset: line 0;}#position:float-left;}

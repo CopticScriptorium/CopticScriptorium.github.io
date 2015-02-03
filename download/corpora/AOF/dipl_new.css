@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'antinoouRegular';
+    src: url('antinoou-webfont.eot');
+    src: url('antinoou-webfont.eot?#iefix') format('embedded-opentype'),
+         url('antinoou-webfont.woff') format('woff'),
+         url('antinoou-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'antinoouItalic';
+    src: url('antinoouitalic-webfont.eot');
+    src: url('antinoouitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('antinoouitalic-webfont.woff') format('woff'),
+         url('antinoouitalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.htmlvis {
+font-family: antinoouRegular, sans-serif;
+counter-reset: line 0;
+}
+div.line:nth-of-type(5n):before{content:counter(line)" "}
+div.line:nth-of-type(5){text-indent:10px;}
+div.line{display: block; white-space:nowrap; counter-increment: line ; height: 22px}
+#div.line{text-indent:20px;}
+div.line:not(:nth-of-type(5n)){text-indent:20px;}
+#.pos{color:red; font-weight: normal}
+#.translation:hover{color: blue;}
+#.rend{font-size: x-large;}
+#.person{color:red;}
+.pb{border-style:solid;}
+.cb{vertical-align: top; counter-reset: line 0; width:180px}#position:float-left;}

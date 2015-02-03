@@ -1,0 +1,34 @@
+
+<div id="footer">
+<a class="github" href="https://github.com/CopticScriptorium" target="new"> Fork us on GitHub</a>!<br />
+
+<a class="twitter" href="https://twitter.com/copticscript" target="_blank">Follow Coptic SCRIPTORIUM on Twitter</a>
+<br/>
+<br/>
+<div id="lastupdate"></div>
+  <script>
+  $(function(){
+      var modiDate = new Date(document.lastModified);
+      var showAs = (modiDate.getMonth() + 1) + "-" + modiDate.getDate() + "-" + modiDate.getFullYear();
+      $("#lastupdate").html("Page last updated: " + showAs);
+  });
+  </script>
+<br/>
+Coptic Scriptorium is supported by the <a href="http://www.neh.gov" target="_blank">National Endowment for the Humanities</a> <a href="http://www.neh.gov/divisions/odh" target="_blank">Office of Digital Humanities</a> and <a href="http://www.neh.gov/divisions/preservation" target="_blank">Division of Preservation and Access</a>, the <a href="www.pacific.edu" target="blank">University of the Pacific</a>, and <a href="http://www.georgetown.edu" target="_blank">Georgetown University</a>.
+<br />
+<br />
+  <div id="sponsors">
+      <img id="img5" alt="Seal of the University of the Pacific"  src="img/Seal_White_RGB.png" height="62px" longdesc="http://www.pacific.edu"/>&nbsp;&nbsp;&nbsp;<img id="img6" src="img/Georgetown_university_seal.png" width="52" height="62px" alt="GeorgetownUniversitySeal" longdesc="http://www.georgetown.edu"/>&nbsp;&nbsp;&nbsp;       <img id="img7" src="img/neh_logo_horizontal_4cprev_u-0.png" width="252" height="62" alt="neh logo" longdesc="http://www.neh.gov"/></div>
+      <br />
+        
+  
+    
+  </div>
+
+  <script>
+      if($(document).find("title").text().toLowerCase().indexOf("workshop")>=0){
+        $("#img5").attr("src", "../img/Seal_White_RGB.png");
+        $("#img6").attr("src", "../img/Georgetown_university_seal.png");
+        $("#img7").attr("src", "../img/neh_logo_horizontal_4cprev_u-0.png");
+      }
+</script>
