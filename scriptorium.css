@@ -28,7 +28,7 @@ body {
 	margin-bottom: 0px;
 	margin-left: 0px;
 	margin-right: 0px;
-	font-size: 18px;
+	font-size: 16px;
 	}
 	
 #wrapper{
@@ -50,7 +50,7 @@ body {
 	padding-right: 56px;
 	padding-left: 56px;
 	padding-bottom: 40px;
-	line-height: 1.8em;
+	line-height: 1.4em;
 	margin-top: 50px;
 	min-height: 100%;
 	margin-bottom: 40px;
@@ -117,7 +117,7 @@ body {
 	padding-right: 56px;
 	padding-bottom: 40px;
 	padding-left: 56px;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 24px;
 	clear: both;
 }
@@ -162,8 +162,8 @@ h4 {font-size: .8em;
 	font-weight:700}
 	
 p, ul, ol, li, table {
-	line-height: 1.8em;
-	font-size: 18px;}
+	line-height: 1.4em;
+	font-size: 16px;}
 
 a:link {
 	color: #742002;
