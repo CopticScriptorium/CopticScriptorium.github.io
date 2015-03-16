@@ -56,7 +56,7 @@ body {
 	margin-bottom: 40px;
 	-webkit-box-shadow: 0px 0px 10px 10px rgba(120,71,9,0.26);
 	box-shadow: 0px 0px 10px 10px rgba(120,71,9,0.26);
-	background-color: hsla(40,53%,100%,0.45);
+	background-color: hsla(40,53%,100%,0.65);
 }
 /*This last integer in the hsla is the opacity of the content box. enter in a decimal value between 1.0 and 0.00 to get 100 different brightnesses of content box background
 */
