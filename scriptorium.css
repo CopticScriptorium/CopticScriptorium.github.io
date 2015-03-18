@@ -35,7 +35,7 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 	margin-bottom: 60px;
-	width: 832px;
+	width: 900px;
 	min-height: 100%;
 	height: 100%;
 	z-index: 2;
@@ -56,7 +56,7 @@ body {
 	margin-bottom: 40px;
 	-webkit-box-shadow: 0px 0px 10px 10px rgba(120,71,9,0.26);
 	box-shadow: 0px 0px 10px 10px rgba(120,71,9,0.26);
-	background-color: hsla(40,53%,100%,0.65);
+	background-color: hsla(40,53%,100%,0.80);
 }
 /*This last integer in the hsla is the opacity of the content box. enter in a decimal value between 1.0 and 0.00 to get 100 different brightnesses of content box background
 */
@@ -68,14 +68,14 @@ body {
 
 .leftcolumn {
 	float: left;
-	width: 340px;
+	width: 374px;
 	margin-right: 20px;
 	margin-bottom: -1000px;
 	padding-bottom: 1000px;
 }
 
 .rightcolumn {
-	width: 340px;
+	width: 374px;
 	margin-left: 20px;
 	float: left;
 	margin-bottom: -1000px;
