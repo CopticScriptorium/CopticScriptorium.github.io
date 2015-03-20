@@ -7,6 +7,14 @@
 	<title>Coptic Scriptorium</title>
 	<link rel="stylesheet" href="scriptorium.css" type="text/css" charset="utf-8"/>
 <meta name="viewport" content="width=800">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script> 
+    $(function(){
+      $("#navbar").load("nav.html");
+      $("#topbanner").load("top.html");
+      $("#bottomcontent").load("bottom.html"); 
+    });
+</script> 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -27,22 +35,11 @@
 
 <body>
 
+<div id="navbar"></div>
 
-<ul id="nav">
-  <li><a href="index.html">HOME</a></li>
-  <li><a href="tools.html">TOOLS</a></li>
-  <li><a href="corpora.html">CORPORA</a></li>
-  <li><a href="FAQ.html">DOCUMENTATION</a></li>
-  <li><a href="news.html">NEWS</a></li>
-   <li><a href="workshop2015/index.html">WORKSHOP</a></li>
-  <li><a href="about.html">ABOUT</a></li>
-</ul><div id="wrapper">
+<div id="wrapper">
 
-<div id="header">
-    <div id="copticlogo"><a href="index.html"><img src="img/copticlogo.png" width="210" height="101" alt="Coptic SCRIPTORIUM"/></a></div>
-
-    <div id="unicorn"><a href="index.html"><img src="img/unicorn.png" width="80" height="101" alt="Unicorn"/></a></div>
-    <div id="englishlogo"><a href="index.html"><img src="img/englishlogo.png" width="199" height="101" alt="Coptic SCRIPTORIUM"/></a></div><img src="img/ruleline.png" width="800px" height="14" alt=""/></div>
+<div id="topbanner"></div>
 
   <div id="content">
   <div class="headline">
@@ -57,24 +54,11 @@ Pellentesque eleifend consequat purus, a pharetra ligula lobortis nec. Nulla cur
 Pellentesque ultricies pharetra sapien sagittis lobortis. Aliquam quis enim eget nisi tempor blandit ut a justo. Ut iaculis arcu ac commodo ullamcorper. Aenean in ornare nibh, in volutpat tellus. Integer vitae faucibus purus. Suspendisse quis dapibus magna. Aenean tristique bibendum nisi, a tempor libero. Quisque eget consectetur erat, non dictum ante. Morbi ullamcorper, eros quis volutpat efficitur, mauris ipsum sodales mi, sed placerat mi metus finibus libero. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis malesuada sapien quis ex accumsan, vel condimentum felis venenatis. Suspendisse potenti. In tincidunt sagittis lacus sit amet pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
   </div>
 
-  <div id="footer"><div id="sponsors">
-      <img alt="Seal of the University of the Pacific"  src="img/Seal_Orange_RGB.png" height="62px" longdesc="http://www.pacific.edu"/>&nbsp;&nbsp;&nbsp;<img src="img/Georgetown_university_seal.gif" width="52" height="62px" alt="GeorgetownUniversitySeal" longdesc="http://www.georgetown.edu"/>&nbsp;&nbsp;&nbsp;       <img src="img/nehlogo.png" width="252" height="62" alt="neh logo" longdesc="http://www.neh.gov"/></div>
-  
-	<br />
-	Coptic Scriptorium is supported by the <a href="http://www.neh.gov" target="_blank">National Endowment for the Humanities</a> <a href="http://www.neh.gov/divisions/odh" target="_blank">Office of Digital Humanities</a> and <a href="http://www.neh.gov/divisions/preservation" target="_blank">Division of Preservation and Access</a>, the <a href="www.pacific.edu" target="blank">University of the Pacific</a>, and <a href="http://www.georgetown.edu" target="_blank">Georgetown University</a>.<br /><br />
-    <a href="https://github.com/CopticScriptorium"><img src="img/GitHub-Mark-32px.png" alt="GitHub_mark" longdesc="www.github.com"/></a><a href="https://github.com/CopticScriptorium" target="new"> Fork us on GitHub</a>!<br />
-    	<br />
-        <a href="https://www.facebook.com/carrieschroeder1" target="_blank"><img src="img/socialicon32.png" width="32" height="32" alt=""/></a> Follow Carolyn on <a href="https://www.facebook.com/carrieschroeder1" target="_blank">Facebook</a> and <a href="https://twitter.com/ctschroeder" target="_blank">Twitter</a><br />
-    	<br />
-	Page last updated 19 December 2014
-    
-  </div>
-    
 </div>
 
 </div>
 	
-	
-	
+<!-- Bottom Content -->
+    <div id="bottomcontent"></div>	
 </body>
     </html>   

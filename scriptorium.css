@@ -30,7 +30,7 @@ body {
 	margin-right: 0px;
 	font-size: 16px;
 	}
-	
+
 #wrapper{
 	margin-right: auto;
 	margin-left: auto;
@@ -58,6 +58,7 @@ body {
 	box-shadow: 0px 0px 10px 10px rgba(120,71,9,0.26);
 	background-color: hsla(40,53%,100%,0.80);
 }
+
 /*This last integer in the hsla is the opacity of the content box. enter in a decimal value between 1.0 and 0.00 to get 100 different brightnesses of content box background
 */
 
@@ -114,27 +115,57 @@ body {
 }
 
 #footer {
+    background-color: #361B01;
+	color: #F4EBDE;
+	padding-top: 40px;
 	padding-right: 56px;
 	padding-bottom: 40px;
 	padding-left: 56px;
 	font-size: 16px;
-	line-height: 24px;
+	line-height: 20px;
 	clear: both;
+	text-align: center;
 }
 
 #footer p {
-	font-size: 12px;
+	font-size: 14px;
+	line-height: 20px;
 }
 
-#sponsors {
+#lastupdate {
+	font-size: 14px;
+	line-height: 20px;
+	clear: both;
+	text-align: center;
+}
+
+
+#footer a {
+	text-decoration: none;
+	color: #EFC17E;
+}
+
+#footer a:hover {
+	color: #FB3815;
+}
+
+/*#sponsors {
 	background-color: hsla(0,100%,100%,0);
 	padding-left: 6px;
 	padding-right: 6px;
 	padding-top: 6px;
 	padding-bottom: 6px;
 	text-align: center;
-}
+}*/
   
+/*#sponsors a {
+	text-decoration: none;
+	color: #F0D38E;
+}
+
+#sponsors a:hover {
+	color: #FB3815;
+}*/
 
 h1 {
 	font-size: 1.4em;
@@ -166,19 +197,25 @@ p, ul, ol, li, table {
 	font-size: 16px;}
 
 a:link {
-	color: #742002;
+	text-decoration: none;
+	color: #AE2124;
 }
 
 a:visited {
-	color: #742002;
+	text-decoration: none;
+	color: #AE2124;
 }
 
+/*original new/visited color #742002, hover/active #BF0508*/
+
 a:hover {
-	color: #BF0508;
+	text-decoration: underline;
+	color: #941C1F;
 }
 
 a:active {
-color: #BF0508;
+	text-decoration: underline;
+	color: #941C1F;
 }
 
 .line {
@@ -611,13 +648,13 @@ margin-top: 1em;
   padding-left: 21px;
 }
 .github {
-  background: url("img/GitHub-Mark-32px.png") no-repeat;
-  background-size: 22px 22px;
+  background: url("img/GitHub-Mark-Light-64px.png") no-repeat;
+  background-size: 19px 19px;
   padding-left: 25px;
 }
 .twitter {
   background: url("img/newsociallogo.png") no-repeat;
-  background-size: 22px 22px;
+  background-size: 19px 19px;
   padding-left: 25px;
 }
 
