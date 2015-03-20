@@ -35,7 +35,7 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 	margin-bottom: 60px;
-	width: 900px;
+	width: 832px;
 	min-height: 100%;
 	height: 100%;
 	z-index: 2;
@@ -69,14 +69,14 @@ body {
 
 .leftcolumn {
 	float: left;
-	width: 374px;
+	width: 340px;
 	margin-right: 20px;
 	margin-bottom: -1000px;
 	padding-bottom: 1000px;
 }
 
 .rightcolumn {
-	width: 374px;
+	width: 340px;
 	margin-left: 20px;
 	float: left;
 	margin-bottom: -1000px;
