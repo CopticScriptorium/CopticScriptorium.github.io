@@ -81,9 +81,19 @@ body {
 	float: left;
 	margin-bottom: -1000px;
 	padding-bottom: 1000px;
+	border: 0px solid black
+ 
 }
 
-  
+.news{
+color:#AE2124;
+font-size: 1.4em;
+font-weight: bold;
+}
+
+ .rss{
+ 
+ }
     
 #copticlogo {
 	float: left;
