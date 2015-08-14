@@ -65,12 +65,6 @@
 	<p><span class="news">Latest news:</span> [<a href="http://blog.copticscriptorium.org/">more</a>]</p>
   </div>
 <script>
-/*
-url = "http://blog.copticscriptorium.org/feed/";
-jQuery.getJSON(url+"&callback=?", function(data) {
-    alert("Prop 1: " + data.title + ", Prop 2: " + data.link);
-});
-*/
 
 $.get("http://blog.copticscriptorium.org/feed/", function(data) {
     var $XML = $(data);
