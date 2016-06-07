@@ -48,20 +48,26 @@
   
   <ul  class="example_queries">
     <li> Search for <strong>Greek verbs</strong> in multiple corpora: <br/>
-      <a href="http://corpling.uis.georgetown.edu/annis/scriptorium#_q=cG9zPSJWIiAmIGxhbmc9IkdyZWVrIiAmICMxXz1fIzI&_c=c2FoaWRpY2EubWFyayxzaGVub3V0ZS5hYnJhaGFtLm91ci5mYXRoZXIsYXBvcGh0aGVnbWF0YS5wYXRydW0sc2FoaWRpY2EuMWNvcmludGhpYW5zLGJlc2EubGV0dGVycyxzaGVub3V0ZS5hMjI&cl=5&cr=5&s=0&l=10&_seg=bm9ybV9ncm91cA" target="_blank"><img src="img/search.gif" alt="search"/></a><tt>pos=&quot;V&quot; &amp; lang=&quot;Greek&quot; &amp; #1 _=_ #2</tt></li>
+      <a href="http://corpling.uis.georgetown.edu/annis/scriptorium#_q=cG9zPSJWIiAmIGxhbmc9IkdyZWVrIiAmICMxXz1fIzI&_c=c2FoaWRpY2EubWFyayxzaGVub3V0ZS5hYnJhaGFtLm91ci5mYXRoZXIsYXBvcGh0aGVnbWF0YS5wYXRydW0sc2FoaWRpY2EuMWNvcmludGhpYW5zLGJlc2EubGV0dGVycyxzaGVub3V0ZS5hMjI&cl=5&cr=5&s=0&l=10&_seg=bm9ybV9ncm91cA" target="_blank"><img src="img/search.gif" alt="search"/></a><tt>pos=&quot;V&quot; &amp; lang=&quot;Greek&quot; &amp; #1 _o_ #2</tt></li>
+    </ul>
+  <blockquote>
+    <p><em>Note: our language tagger  tags for the oldest language of origin, including Hebrew. For *all* loan words, use the following query to capture all language tags:</em></p>
+    <p><a href="https://corpling.uis.georgetown.edu/annis/scriptorium#_q=cG9zPSJWIiAmIGxhbmcgJiAjMV9vXyMy&amp;_c=c2FoaWRpY2EubWFyayxhcG9waHRoZWdtYXRhLnBhdHJ1bSxzaGVub3V0ZS5hYnJhaGFtLm91ci5mYXRoZXIsc2FoaWRpY2EuMWNvcmludGhpYW5zLGJlc2EubGV0dGVycyxzaGVub3V0ZS5hMjI&amp;cl=5&amp;cr=5&amp;s=0&amp;l=10&amp;_seg=bm9ybV9ncm91cA" target="_blank"><img src="img/search.gif" alt="search"/></a><tt>pos=&quot;V&quot; &amp; lang &amp; #1 _o_ #2</tt></p>
+  </blockquote>
+  <ul  class="example_queries">
     <li> Search for <b>focalizing converters</b> in Besa's letters: <br/>
       <a href="http://corpling.uis.georgetown.edu/annis/scriptorium#_q=cG9zPSJDRk9DIg&_c=YmVzYS5sZXR0ZXJz&cl=5&cr=5&s=0&l=10&_seg=bm9ybV9ncm91cA" target="_blank"><img src="img/search.gif" alt="search"/></a><tt>pos=&quot;CFOC&quot;</tt></li>
-    <li>Look for <b>locational expressions</b> in the Apophthegmata Patrum corpus: <br/>
+    <li>Look for <b>locational expressions</b> in the Apophthegmata Patrum corpus (currently a subset of the corpus is annotated for locational expressions): <br/>
       <a href="http://corpling.uis.georgetown.edu/annis/scriptorium#_q=ZW50aXR5PSJwbGFjZSI&_c=YXBvcGh0aGVnbWF0YS5wYXRydW0&cl=5&cr=5&s=0&l=10&_seg=bm9ybV9ncm91cA" target="_blank"><img src="img/search.gif" alt="search"/></a><tt>entity=&quot;place&quot;</tt></li>
     <li>Find some mentions of <b>the following terms of kinship in the translation</b> of Abraham our Father: <br/>
       <a href="http://corpling.uis.georgetown.edu/annis/scriptorium#_q=dHJhbnNsYXRpb249Ly4qKFtNbV1vdGhlcnxbQmJdcm90aGVyfFtGZl1hdGhlcnxbU3NdaXN0ZXJ8W1NzXW9ufFtEZF1hdWdodGVyKS4qLw&_c=c2hlbm91dGUuYWJyYWhhbS5vdXIuZmF0aGVy&cl=5&cr=5&s=0&l=10&_seg=bm9ybV9ncm91cA" target="_blank"><img src="img/search.gif" alt="search"/></a><tt>translation=/.*([Mm]other|[Bb]rother|[Ff]ather|[Ss]ister|[Ss]on|[Dd]aughter).*/</tt></li>
     <li>Search for <b>lines ending with a letter written in small print</b> in Besa's letters: <br/>
       <a href="http://corpling.uis.georgetown.edu/annis/scriptorium#_q=aGlfcmVuZD0vLipzbWFsbC4qLyAmIGxiX24gJiAjMV9yXyMy&_c=YmVzYS5sZXR0ZXJz&cl=5&cr=5&s=0&l=10&_seg=bm9ybV9ncm91cA" target="_blank"><img src="img/search.gif" alt="search"/></a><tt>hi_rend=/.*small.*/ &amp; lb_n &amp; #1 _r_ #2</tt></li>
     <li>See how many lines of Abraham Our Father <b>don't come from the manuscript MONB.YA</b>: <br/>
-      <a href="lb_n & meta::msName!="MONB.YA"" target="_blank"><img src="img/search.gif" alt="search"/></a><tt>lb_n &amp; meta::msName!=&quot;MONB.YA&quot;</tt></li>
+      <a href="https://corpling.uis.georgetown.edu/annis/scriptorium#_q=bGJfbiAmIG1ldGE6Om1zTmFtZSE9Ik1PTkIuWUEi&amp;_c=c2hlbm91dGUuYWJyYWhhbS5vdXIuZmF0aGVy&amp;cl=5&amp;cr=5&amp;s=0&amp;l=10&amp;_seg=bm9ybV9ncm91cA"MONB.YA"" target="_blank"><img src="img/search.gif" alt="search"/></a><tt>lb_n &amp; meta::msName!=&quot;MONB.YA&quot;</tt></li>
     <li>Find words with <b>the morpheme <span class="anti">ⲙⲛⲧ-</span></b> in Besa's letters and Shenoute's Acephalous Text 22: <br/>
       <a href="http://corpling.uis.georgetown.edu/annis/scriptorium#_q=bW9ycGg9IuKymeKym-KypyI&_c=YmVzYS5sZXR0ZXJzLHNoZW5vdXRlLmEyMg&cl=5&cr=5&s=0&l=10&_seg=bm9ybV9ncm91cA" target="_blank"><img src="img/search.gif" alt="search"/></a><tt>morph=&quot;<span class="anti">ⲙⲛⲧ</span>&quot;</tt></li>
-    <li>Find <b>common nouns referring back to proper names</b> in the Apophthegmata Patrum corpus: <br/>
+    <li>Find <b>common nouns referring back to proper names</b> in the Apophthegmata Patrum corpus (currently a subset of the corpus is annotated for to coreference these entities): <br/>
       <a href="http://corpling.uis.georgetown.edu/annis/scriptorium#_q=cG9zPSJOIiAmIHBvcz0iTlBST1AiICYgZW50aXR5ICYgZW50aXR5ICYgIzMgLT5jb3JlZlt0eXBlPS9kaWZmfGFwcG9zL10gIzQgJiAjM19yXyMxICYgIzRfcl8jMg&_c=YXBvcGh0aGVnbWF0YS5wYXRydW0&cl=5&cr=5&s=0&l=10&_seg=bm9ybV9ncm91cA" target="_blank"><img src="img/search.gif" alt="search"/></a><tt>pos=&quot;N&quot; &amp; pos=&quot;NPROP&quot; &amp; entity &amp; entity &amp; #3 -&gt;coref[type=/diff|appos/] #4 &amp; #3 _r_ #1 &amp; #4 _r_ #2</tt></li>
   </ul>
   </li>
