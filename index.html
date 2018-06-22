@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>SCRIPTORIUM | About</title>
+  <title>Coptic SCRIPTORIUM</title>
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
   <link rel="stylesheet" href="css/global.css" type="text/css" charset="utf-8"/>
+  
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -25,7 +27,7 @@
 
 </head>
 
-<body>
+<body class="home">
 
   <div id="wrapper">
 
@@ -37,11 +39,79 @@
 
       <div class="container">
 
-        <div class="breadcrumb">
-          Home
-        </div>
 
   <div id="content">
+
+    <h1>Coptic Scriptorium: Digital Research in Coptic Language and Literature</h1>
+    <h2>Get started with these popular tools and resources:</h2>
+
+    <div class="tile-container">
+
+      <div class="content-tile">
+
+        <img src="images/thumb1.jpg" alt="" width="133">
+
+        <h3>Corpora</h3>
+        <p>Read and browse Coptic texts in our corpora, including many with aligned translations.</p>
+        <a href="http://data.copticscriptorium.org/" class="btn alt">Browse Corpora</a>
+
+      </div>
+
+      <div class="content-tile">
+
+        <img src="images/thumb2.jpg" alt="" width="133">
+
+        <h3>Coptic Dictionary</h3>
+        <p>Lookup a word in an online Coptic Dictionary, developed with our German partners in the KELLIA project.</p>
+        <a href="https://corpling.uis.georgetown.edu/coptic-dictionary/" class="btn alt">See Coptic Dictionary</a>
+
+      </div>
+
+      <div class="content-tile">
+
+        <img src="images/thumb3.jpg" alt="" width="133">
+
+        <h3>NLP Service</h3>
+        <p>Automatically analyze Coptic text using our NLP service.</p>
+        <a href="https://corpling.uis.georgetown.edu/coptic-nlp/" class="btn alt">NLP Service</a>
+
+      </div>
+
+      <div class="content-tile">
+
+        <img src="images/thumb4.jpg" alt="" width="133">
+
+        <h3>ANNIS Scriptorium</h3>
+        <p>Complete simple searches or complex queries of corpora in our database, ANNIS.<br><a href="https://www.youtube.com/watch?v=gGZWbPzcJPA">View Tutorial</a></p>
+        <a href="https://corpling.uis.georgetown.edu/annis/scriptorium" class="btn alt">Search Database</a>
+
+      </div>
+
+      <div class="content-tile">
+
+        <img src="images/thumb5.jpg" alt="" width="133">
+
+        <h3>Tools</h3>
+        <p>Explore our suite of tools to process, analyze, and annotate Coptic text.</p>
+        <a href="/tools" class="btn alt">See Tools</a>
+
+      </div>
+
+      <div class="content-tile">
+
+        <img src="images/thumb6.jpg" alt="" width="133">
+
+        <h3>About</h3>
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod.</p>
+        <a href="/about" class="btn alt">Full About</a>
+
+      </div>
+
+
+    </div>
+
+
+    <!--
       <div class="leftcolumn">
       <p>Coptic SCRIPTORIUM is a platform for interdisciplinary and computational research
               in texts in the Coptic language, particularly the Sahidic dialect.  </p>
@@ -61,31 +131,26 @@
     <div id="rightcolumn" class="rightcolumn rss">
 	<p><span class="news">Latest news:</span> [<a href="http://blog.copticscriptorium.org/">more</a>]</p>
   </div>
-<script>
 
-$.get("http://blog.copticscriptorium.org/feed/", function(data) {
-    var $XML = $(data);
-	i=0;
-    $XML.find("item").each(function(i) {
-        var $this = $(this),
-            item = {
-                title:       $this.find("title").text(),
-                link:        $this.find("link").text(),
-                description: $this.find("description").text(),
-                pubDate:     new Date($this.find("pubDate").text()),
-                author:      $this.find("author").text()
-            };
-			i++;
-			if (i<=3){
-				post = "<h2>"+item.title+'</h2>\n<p><i>'+item.pubDate.getFullYear()+'-'+(item.pubDate.getMonth()+1)+'-'+item.pubDate.getDate()+'</i></p><p>'+item.description+'</p><p><a href="'+item.link+'">[link]</a></p>\n'
-				document.getElementById('rightcolumn').innerHTML = document.getElementById('rightcolumn').innerHTML + post;
-			}
-    });
-});
-</script>
+-->
+
+
+
+  
+
+
+</div>
+
+</div>
 
 
  </section>
+
+ <div class="slide-container">
+  <div class="container">
+    <div id="slider"></div>
+  </div>
+</div>
 
 
     <footer id="footer">
@@ -98,14 +163,46 @@ $.get("http://blog.copticscriptorium.org/feed/", function(data) {
   </div> <!-- /#wrapper -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 <script> 
   $(function(){
     //$("#navbar").load("nav.html");
     $("#header").load("header.html",function() {
       $(".m-home").addClass('on');
     });
-    $("#footer").load("footer.html"); 
+    $("#footer").load("footer.html");
+
+    $.get("http://blog.copticscriptorium.org/feed/", function(data) {
+
+    var $XML = $(data);
+    i=0;
+
+    $XML.find("item").each(function(i) {
+        var $this = $(this),
+            item = {
+                title:       $this.find("title").text(),
+                link:        $this.find("link").text(),
+                description: $this.find("description").text(),
+                pubDate:     new Date($this.find("pubDate").text()),
+                author:      $this.find("author").text()
+            };
+
+      i++;
+      if (i<=3){
+
+        $post = "<div><h2>"+item.title+'</h2>\n<h2>'+item.pubDate.getFullYear()+'-'+(item.pubDate.getMonth()+1)+'-'+item.pubDate.getDate()+'</h2><p>'+item.description+'</p><p><a href="'+item.link+'" class="btn">Read More</a></p></div>';
+
+        $('#slider').append($post);
+
+      } else {
+        $('#slider').bxSlider();
+      }
+    });
+});
+
+    
   });
 </script>
+
 </body>
 </html>   

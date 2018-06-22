@@ -18,9 +18,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-  font-size:3.4rem;
+  font-size:3.2rem;
   font-weight:400;
-  margin-bottom:1.3rem;
+  margin-bottom:1.6rem;
   line-height:1.2;
 }
 
@@ -88,6 +88,10 @@ hr {
   background-color:#fff;
 }
 
+.home .container {
+  background-color:transparent;
+}
+
 label {
 
 }
@@ -105,12 +109,17 @@ input[type="tel"] {
 input[type="submit"],
 a.btn,
 button {
-
   display:inline-block;
   font-size:1.4rem;
   background-color:#d6d1bb;
   border-radius:4px;
   padding:10px 20px;
+}
+
+input[type="submit"].alt,
+a.btn.alt,
+button.alt {
+  background-color:#F6F6F6;
 }
 
 
@@ -231,6 +240,46 @@ button {
   margin-right:2%;
 }
 
+.tile-container {
+  overflow:hidden;
+  margin-top:40px;
+}
+
+.content-tile {
+  position:relative;
+  float:left;
+  width:253px;
+  padding:28px 20px 0 155px;
+  min-height:230px;
+  border-left:#8E463D 8px solid;
+  border-radius:5px;
+  margin-bottom:50px;
+  background-color:#fff;
+  overflow:hidden;
+}
+.content-tile:nth-child(even) {
+  margin-left:24px;
+}
+.content-tile img {
+  position:absolute;
+  top:0;
+  left:0;
+}
+.content-tile h3 {
+  display:inline-block;
+  padding-right:20px;
+  font-weight:normal;
+  font-size:24px;
+  padding-bottom:6px;
+  background: url(../images/hor-line.png) no-repeat 0 100%;
+  background-size:auto 3px;
+}
+.content-tile p {
+  margin:0;
+  margin-bottom:20px;
+  min-height:100px;
+}
+
 #footer {
   color:#fff;
   font-size:1.4rem;
@@ -263,6 +312,61 @@ button {
   float:left;
   width:305px;
 }
+
+
+.slide-container {
+  background-color:#8E463D;
+  margin-top:-40px;
+  padding:40px 0;
+}
+.slide-container .container {
+  background-color:transparent;
+  padding:0;
+}
+
+#slider {
+  color:#F2F0F3;
+  background-color:transparent;
+}
+
+#slider h2 {
+  font-size:24px;
+}
+
+#slider>div {
+  padding:0 80px;
+} 
+
+.bx-wrapper {
+  background-color:transparent;
+  border:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  margin-bottom:20px;
+}
+
+.bx-wrapper .bx-pager {
+  text-align:left;
+  margin-left:75px;
+  bottom:-10px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background:#D6D1BB;
+}
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+  background:#3D8E6F;
+}
+
+.bx-wrapper .bx-prev,
+.bx-wrapper .bx-next {
+  background-color:#D6D1BB;
+  border-radius:50%;
+  background-image:url(../images/controls.png);
+}
+
+
+
 
 
 
