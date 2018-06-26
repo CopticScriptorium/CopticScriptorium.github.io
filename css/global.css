@@ -9,6 +9,7 @@ body {
 	font-family:Helvetica;
   font-weight:400;
   font-size:1.6rem;
+  margin:0;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -133,6 +134,12 @@ button.alt {
   background-size:100% auto;
 }
 
+@media (max-width: 940px) {
+  #header .container {
+    padding-top:80px;
+  }
+}
+
 .logo1 {
   position:absolute;
   top:0;
@@ -144,11 +151,39 @@ button.alt {
   right:-100px;
 }
 
+@media (max-width: 1200px) {
+
+  .logo1 {
+    left:0;
+  }
+  .logo2 {
+    right:0;
+  }
+
+}
+
+@media (max-width: 940px) {
+
+  .logo1 {
+    left:20px;
+  }
+  .logo2 {
+    right:20px;
+  }
+
+}
+
 
 #main-menu,
 #sub-menu {
   margin-top:10px;
   padding-bottom:34px;
+}
+@media (max-width: 600px) {
+  #main-menu,
+  #sub-menu {
+    padding-bottom:0;
+  }
 }
 #main-menu ul,
 #sub-menu ul {
@@ -157,17 +192,37 @@ button.alt {
   padding:0;
   text-align:center;
 }
+@media (max-width: 600px) {
+  #main-menu ul,
+  #sub-menu ul {
+    line-height:60px;
+    max-width:420px;
+    margin:0 auto;
+  }
+}
 #main-menu ul li,
 #sub-menu ul li {
   padding:0;
   margin:0 20px;
   display:inline-block;
 }
+@media (max-width: 1200px) {
+  #main-menu ul li,
+  #sub-menu ul li {
+    margin:0 10px;
+  }
+}
 #main-menu ul li a,
 #sub-menu ul li a {
   position:relative;
   font-size:18px;
   color:#4A4A4A;
+}
+@media (max-width: 1200px) {
+  #main-menu ul li a,
+  #sub-menu ul li a {
+    font-size:16px;
+ }
 }
 #main-menu ul li a:hover,
 #sub-menu ul li a:hover {
@@ -215,6 +270,7 @@ button.alt {
   font-size:2.4rem;
   color:#9f9f9f;
   margin-bottom:3rem;
+  line-height:1.6;
 }
 .breadcrumb .divider {
   margin:0 8px;
@@ -260,6 +316,13 @@ button.alt {
 .content-tile:nth-child(even) {
   margin-left:24px;
 }
+@media (max-width: 600px) {
+  .content-tile {
+    width:auto;
+    padding-bottom:20px;
+    margin-left:0 !important;
+  }
+}
 .content-tile img {
   position:absolute;
   top:0;
@@ -286,13 +349,28 @@ button.alt {
   background-color:#4A4A4A;
   padding-top:20px;
   padding-bottom:40px;
-  overflow:hidden;
+}
+#footer:before,
+#footer:after {
+    content:" ";
+    display:table;
+}
+
+#footer:after {
+    clear:both;
 }
 #footer .container {
   padding-left:0;
   padding-right:0;
   max-width:936px;
   background-color:transparent;
+}
+@media (max-width: 960px) {
+
+  #footer .container {
+    padding-left:20px;
+    padding-right:20px;
+  }
 }
 #footer a {
   color:#fff;
@@ -304,6 +382,7 @@ button.alt {
   float:left;
   width:570px;
   margin-right:50px;
+  margin-bottom:20px;
 }
 .footer-col-left p {
   margin-right:40px;
@@ -311,6 +390,18 @@ button.alt {
 .footer-col-right {
   float:left;
   width:305px;
+}
+
+@media (max-width: 960px) {
+  .footer-col-left {
+    float:none;
+    width:100%;
+    margin-right:0;
+  }
+  .footer-col-right {
+    float:none;
+    width:100%;
+  }
 }
 
 
