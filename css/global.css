@@ -290,10 +290,18 @@ button.alt {
   padding:2%;
   margin-bottom:3rem;
 }
-.content-box-col {
+.content-col-container {
+  overflow:hidden;
+  margin-bottom:3rem;
+}
+.content-col {
   width:45%;
   float:left;
   margin-right:2%;
+}
+
+.content-col > .content-box {
+  padding:4%;
 }
 
 .tile-container {
