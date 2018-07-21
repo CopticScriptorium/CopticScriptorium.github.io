@@ -3,6 +3,28 @@ html {
   font-size: 62.5%;
 }
 
+@font-face {
+    font-family: 'antinoouRegular';
+    src: url('../antinoou-webfont.eot');
+    src: url('../antinoou-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../antinoou-webfont.woff') format('woff'),
+         url('../antinoou-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'antinoouItalic';
+    src: url('../antinoouitalic-webfont.eot');
+    src: url('../antinoouitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../antinoouitalic-webfont.woff') format('woff'),
+         url('../antinoouitalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.anti{font-family: antinoouRegular, sans-serif;}
+
 body {
 	background:#F6F6F6;
   color:#4A4A4A;
