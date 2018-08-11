@@ -62,6 +62,8 @@ body {
 /*This last integer in the hsla is the opacity of the content box. enter in a decimal value between 1.0 and 0.00 to get 100 different brightnesses of content box background
 */
 
+.right{text-align: right}
+
 .headline {
 	clear: both;
 	width: 100%;
