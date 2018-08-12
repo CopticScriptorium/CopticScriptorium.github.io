@@ -186,17 +186,26 @@
     $XML.find("item").each(function(i) {
         var $this = $(this),
             item = {
+                text: $this.text(),
                 title:       $this.find("title").text(),
                 link:        $this.find("link").text(),
                 description: $this.find("description").text(),
                 pubDate:     new Date($this.find("pubDate").text()),
                 author:      $this.find("author").text()
+                img: "",
             };
+
+            post_html = item.text.replace("<![CDATA[", "").replace("]]>", "");  // remove CDATA
+            post_html = "<top>" + post_html + "</top>";  // ensure top level node for jquery
+            var src = $(post_html).find("img:first").attr("src");  // find first image src
+            if (src != null){
+                item.img = '<img class="rss_image" src="'+src+'">'
+            }
 
       i++;
       if (i<=3){
 
-        $post = "<div><h2>"+item.title+'</h2>\n<h2>'+item.pubDate.getFullYear()+'-'+(item.pubDate.getMonth()+1)+'-'+item.pubDate.getDate()+'</h2><p>'+item.description+'</p><p><a href="'+item.link+'" class="btn">Read More</a></p></div>';
+        $post = "<div><h2>"+item.title+'</h2>\n<h2>'+item.pubDate.getFullYear()+'-'+(item.pubDate.getMonth()+1)+'-'+item.pubDate.getDate()+'</h2>'+item.img+'<p>'+item.description+'</p><hr class="hidden_hr"><p><a href="'+item.link+'" class="btn">Read More</a></p></div>';
 
         $('#slider').append($post);
 
