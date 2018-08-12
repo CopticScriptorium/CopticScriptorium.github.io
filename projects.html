@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>SCRIPTORIUM | Kellia</title>
+  <title>SCRIPTORIUM | Projects</title>
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -33,24 +33,34 @@
 
     </header>
 
+    <div id="sub-menu">
+
+    </div>
+
     <section id="main">
 
       <div class="container">
 
         <div class="breadcrumb">
-          <a href="/projects">Projects</a>
+          <a href="/documentation">Projects</a>
           <span class="divider">/</span>
-          Kellia
+          Overview
         </div>
 
 
+
+
 <!-- CONTENT STARTS HERE =============================== -->
+
 <div id="content">
-  <p><strong>K</strong>optische/Coptic <strong>E</strong>lectronic <strong>L</strong>anguage and <strong>L</strong>iterature <strong>I</strong>nternational <strong>A</strong>lliance is a collaboration between Coptic SCRIPTORIUM, the <a href="http://coptot.manuscriptroom.com/" target="_blank">Göttingen Coptic Old Testament Project</a> , and other partners.  KELLIA has been awarded a <a href="http://www.neh.gov/divisions/odh/grant-news/announcing-6-nehdfg-bilateral-digital-humanities-program-awards">joint NEH-DFG bilateral grant</a> for  sharing data and technologies and for developing common standards in Coptic DH. </p>
-  <p>Visit the <a href="http://blog.copticscriptorium.org/?cat=8">entries on our blog</a> for the latest news and updates regarding KELLIA.</p>
-  <p><em>Kellia, or &quot;the Cells,&quot; was an early Christian monastic settlement in Egypt. Monks lived in clusters of  hermitages in the western Nile Delta</em>.    
-  <p>
+<p>Coptic Scriptorium has been supported by a series of funded projects:</p>
+<ul>
+	<li><a href="/scriptorium">Coptic Scriptorium</a> &ndash; <em>Digitizing a Corpus for Interdisciplinary Research in Ancient Egyptian</em> (NEH Preservation and Access grant) and <em>A Corpus, Tools, and Methods for Corpus Linguistics and Computational Historical Research in Ancient Egypt</em> (ODH Start-Up grant)</li>
+	<li><a href="/kellia">Kellia</a> &ndash; <strong>K</strong>optische/Coptic <strong>E</strong>lectronic <strong>L</strong>anguage and <strong>L</strong>iterature <strong>I</strong>nternational <strong>A</strong>lliance</li>
+	<li><a href="/dhag">Digital Humanities Advancement Grant</a> &ndash; <em>A Linked Digital Environment for Coptic Studies: Integrating Heterogeneous Data with Machine Learning and Natural Language Processing</em></li>
+</ul>
 </div>
+
 
 <!-- END CONTENT ============================== -->
 
@@ -73,12 +83,11 @@
       $(".m-projects").addClass('on');
     });
     $("#sub-menu").load("projects-menu.html",function() {
-      $(".m-kellia").addClass('on');
+      $(".m-projects-overview").addClass('on');
     });
     $("#footer").load("footer.html");
   });
 </script>
-
 
 
 </body>
