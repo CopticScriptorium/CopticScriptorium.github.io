@@ -486,7 +486,12 @@ button.alt {
   background-image:url(../images/controls.png);
 }
 
-
+.rss_image{
+    float: left;
+    max-width: 300px;
+    margin-right: 10px;
+    border-radius: 25px;
+}
 
 
 
