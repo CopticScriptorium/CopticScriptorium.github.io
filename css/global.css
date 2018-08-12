@@ -488,12 +488,15 @@ button.alt {
 
 .rss_image{
     float: left;
-    max-width: 300px;
+    max-width: 300px !important;
     margin-right: 10px;
-    border-radius: 25px;
+    border-radius: 15px;
 }
 
-
+.hidden_hr {
+    clear: both;
+    visibility: hidden;
+}
 
 
 
