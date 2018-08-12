@@ -192,7 +192,7 @@
                 description: $this.find("description").text(),
                 pubDate:     new Date($this.find("pubDate").text()),
                 author:      $this.find("author").text(),
-                img: "",
+                img: ""
             };
 
             post_html = item.text.replace("<![CDATA[", "").replace("]]>", "");  // remove CDATA
