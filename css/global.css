@@ -67,13 +67,14 @@ h5 {
 }
 
 a {
-  color:#8E463D;
+  color:#a4122f;
   text-decoration:none;
-
-  &:hover {
-    text-decoration:underline;
-  }
 }
+
+a:hover {
+  text-decoration:underline;
+}
+  
 p {
 	margin:0;
   line-height:1.5;
