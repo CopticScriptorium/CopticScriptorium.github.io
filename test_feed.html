@@ -63,6 +63,31 @@
   </div>
 <script>
 
+$.ajax({
+url: 'https://blog.copticscriptorium.org/feed/',
+dataType: "xml",
+type: 'GET',
+success: function(data){
+ var XML = $(data);
+ 	i=0;
+    XML.find("item").each(function(i) {
+        var $this = $(this),
+            item = {
+                title:       $this.find("title").text(),
+                link:        $this.find("link").text(),
+                description: $this.find("description").text(),
+                pubDate:     new Date($this.find("pubDate").text()),
+                author:      $this.find("author").text()
+            };
+			i++;
+			if (i<=3){
+				post = "<h2>"+item.title+'</h2>\n<p><i>'+item.pubDate.getFullYear()+'-'+(item.pubDate.getMonth()+1)+'-'+item.pubDate.getDate()+'</i></p><p>'+item.description+'</p><p><a href="'+item.link+'">[link]</a></p>\n'
+				document.getElementById('rightcolumn').innerHTML = document.getElementById('rightcolumn').innerHTML + post;
+			}
+    });
+}
+});
+/*
 $.get("https://blog.copticscriptorium.org/feed/", function(data) {
     var $XML = $(data);
 	i=0;
@@ -82,6 +107,7 @@ $.get("https://blog.copticscriptorium.org/feed/", function(data) {
 			}
     });
 });
+*/
 </script>
 
 </div>
