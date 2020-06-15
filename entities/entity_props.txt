@@ -1,0 +1,129 @@
+Mark	person	589
+Coptic average	person	4763
+1Corinthians	person	312
+Ruth	person	279
+Besa	abstract	276
+Coptic average	abstract	2519
+Mark	abstract	237
+Mark	place	230
+Coptic average	place	1058
+Apophthegmata	abstract	226
+Apophthegmata	person	225
+1Corinthians	abstract	211
+Mark	object	188
+Coptic average	object	1447
+Pseudo-Athanasius	abstract	163
+Besa	person	160
+Pseudo-Athanasius	person	150
+Victor the General	person	138
+Dormition of John	person	133
+Shenoute	person	385
+Dormition of John	abstract	127
+Shenoute	abstract	289
+Pseudo-Ephrem	person	102
+Life of Cyrus	person	102
+Pseudo-Ephrem	abstract	99
+Ruth	place	90
+Life of Onnophrius	abstract	83
+Life of Onnophrius	person	71
+Ruth	abstract	70
+Life of Onnophrius	place	55
+Life of Cyrus	place	52
+Mark	time	51
+Coptic average	time	396
+Life of Onnophrius	object	50
+Shenoute	object	72
+Shenoute	place	69
+Victor the General	object	45
+Life of Cyrus	abstract	45
+Apophthegmata	object	42
+Victor the General	abstract	41
+Besa	place	40
+Apophthegmata	place	40
+Besa	object	39
+1Corinthians	object	38
+Victor the General	place	36
+Dormition of John	object	34
+Life of Cyrus	object	32
+Pseudo-Athanasius	object	30
+Dormition of John	place	30
+Besa	time	30
+1Corinthians	place	29
+Pseudo-Ephrem	object	29
+Life of Onnophrius	time	28
+Life of Cyrus	time	28
+Ruth	time	27
+Victor the General	time	27
+Mark	substance	22
+Coptic average	substance	242
+Ruth	object	22
+Mark	animal	21
+Coptic average	animal	201
+Pseudo-Athanasius	place	20
+Mark	event	20
+Coptic average	event	365
+Mark	plant	20
+Coptic average	plant	104
+Shenoute	animal	24
+Pseudo-Ephrem	place	18
+Ruth	organization	18
+Coptic average	organization	88
+Victor the General	substance	17
+Dormition of John	event	15
+1Corinthians	time	15
+Pseudo-Ephrem	time	15
+Besa	substance	14
+Dormition of John	time	14
+Pseudo-Athanasius	event	13
+Shenoute	time	27
+Ruth	plant	12
+Victor the General	event	11
+Apophthegmata	event	11
+Pseudo-Athanasius	time	11
+1Corinthians	substance	10
+Pseudo-Athanasius	plant	9
+Shenoute	substance	10
+Apophthegmata	animal	8
+Apophthegmata	time	8
+Ruth	event	7
+Shenoute	plant	7
+Life of Cyrus	organization	7
+Besa	event	7
+Life of Onnophrius	animal	7
+1Corinthians	event	6
+Shenoute	event	13
+Life of Onnophrius	plant	6
+Apophthegmata	substance	6
+Pseudo-Ephrem	substance	6
+Life of Cyrus	plant	6
+Shenoute	organization	9
+Victor the General	animal	5
+Besa	organization	5
+Life of Onnophrius	event	5
+Besa	plant	5
+Life of Onnophrius	substance	5
+Pseudo-Ephrem	event	4
+Life of Cyrus	event	4
+Life of Cyrus	animal	4
+Life of Onnophrius	organization	3
+Apophthegmata	organization	3
+Mark	organization	3
+Dormition of John	plant	3
+Besa	animal	3
+Victor the General	organization	3
+1Corinthians	organization	3
+Dormition of John	substance	2
+Pseudo-Athanasius	substance	2
+Ruth	substance	1
+Pseudo-Ephrem	organization	1
+Apophthegmata	plant	1
+English fiction	person	2117
+English fiction	object	826
+English fiction	abstract	652
+English fiction	place	349
+English fiction	event	249
+English fiction	substance	147
+English fiction	animal	129
+English fiction	time	115
+English fiction	plant	35
+English fiction	organization	33

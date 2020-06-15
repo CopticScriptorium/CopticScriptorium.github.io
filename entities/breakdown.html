@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--  treemap based on http://bost.ocks.org/mike/treemap/ -->
+<html>
+<head>
+<meta charset="utf-8">
+<title>Plotting Coptic Entities</title>
+<link href="bootstrap-combined.min.css" rel="stylesheet">
+<link rel="stylesheet" href="font-awesome.min.css"/>
+<link href="breakdown.css" rel="stylesheet">
+</head>
+
+<body>
+<!--<div id="chart"></div>-->
+
+<script src="jquery-1.7.2.min.js"></script>
+<script src="d3.v3.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<!--<script src="entity_proper.js"></script>-->
+<script src="vis-network.min.js"></script>
+<div class="tabbable">
+            <ul class="nav nav-tabs">
+                <li class="active"><a class="atab" href="#a_tab" data-toggle="tab">TreeMap</a></li>
+                <li><a class="btab" href="#b_tab" data-toggle="tab">Named/Non-named by Corpus</a></li>
+                <li><a class="dtab" href="#c_tab" data-toggle="tab">Entity Proportions by Corpus</a></li>
+                <li><a class="etab" href="#d_tab" data-toggle="tab">Entity Term Network</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="a_tab">
+                    <h1>Coptic Entity TreeMap</h1>
+                    <div id="chart_treemap"></div>
+					<div><p style="margin: 20px">Click on a category to expand!</p></div>
+                </div>
+                <div class="tab-pane" id="b_tab">
+                    <h1>Named/Non-named by Corpus</h1>
+                    <div id="chart_proper" class="g-chart"></div>
+					<div><p style="margin: 20px">Taking a corpus of English fiction with 2,916 entity mentions as a baseline, ...</p></div>
+                </div>
+                <div class="tab-pane" id="c_tab">
+                    <h1>Entity Proportions by Corpus</h1>
+					<select id="sel_ent1" onchange="load_prop_data()"><option value="abstract">abstract</option></select>
+					<select id="sel_ent2" onchange="load_prop_data()"><option value="object">object</option></select>
+					<p>Icon sizes reflect deviation from average ratio</p>
+                    <div id="table_type_proportions"></div>
+					<div><p style="margin: 20px">&nbsp;</p></div>
+                </div>
+                <div class="tab-pane" id="d_tab">
+                    <h1>Entity Term Local Networks</h1>
+					<div id="network_controls"><datalist id="terms"></datalist><input id="entity_term" value="ⲕⲟⲥⲙⲟⲥ" type="text" list="terms" onchange="render(null)";></div>
+                    <div id="mynetwork" style="width: 95%"></div>
+					<div><p style="margin: 20px">&nbsp;</p></div>
+                </div>
+				</div>
+        </div>
+
+        <script>
+            $.ajaxSetup ({
+                // Disable caching of AJAX responses
+                // Used when debugging
+                cache: false
+            });
+        
+            $.getScript("entity_treemap.js");
+            $(".atab").click(function() {
+                $.getScript("entity_treemap.js");
+            })
+            $(".btab").click(function() {
+                $.getScript("entity_proper.js");
+            })
+            $(".ctab").click(function() {
+                $.getScript("entity_people_places.js");
+            })
+            $(".dtab").click(function() {
+                $.getScript("entity_type_proportions.js");
+            })
+            $(".etab").click(function() {
+                $.getScript("entity_term_network.js");
+            })
+			
+        </script>
+
+<!--<script src="entity_type_proportions.js"></script>-->
+
+</body>
+</html>

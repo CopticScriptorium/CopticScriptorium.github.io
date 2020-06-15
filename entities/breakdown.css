@@ -1,0 +1,155 @@
+.ctext{display:none}
+#chart {
+  background: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+text {
+  pointer-events: none;
+}
+
+.grandparent text {
+  font-weight: bold;
+}
+
+rect {
+  fill: none;
+  stroke: #fff;
+}
+
+rect.parent,
+.grandparent rect {
+  stroke-width: 2px;
+}
+
+rect.parent {
+    pointer-events: none;
+}
+
+.grandparent rect {
+  fill: orange;
+}
+
+.grandparent:hover rect {
+  fill: #ee9700;
+}
+
+.children rect.parent,
+.grandparent rect {
+  cursor: pointer;
+}
+
+.children rect.parent {
+  fill: #bbb;
+  fill-opacity: .5;
+}
+
+.children:hover rect.child {
+  fill: #bbb;
+}
+
+.g-hed {
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:20px; 
+    margin: 3px 0;
+  }
+
+  .g-source-bold {
+    text-align: left;
+    font-size:11px;
+    font-weight: bold;
+    color: #333333; 
+  }
+
+  .g-source {
+    margin-bottom: 2px;
+    font-size:11px;
+    color: #999999;
+  }
+
+  .g-intro {
+    font-size: 18px;
+    margin: 0px 0px 10px 0px;
+    color: #333333;
+  }
+
+  .g-num {
+    fill:#c12726;
+  }
+
+   .g-num2 {
+     fill:#e0e0e0;
+  }
+
+  .g-labels {
+    font-family: "Proxima-Nova",Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .x.axis line, .y.axis line {
+    display: none;
+  }
+
+  .x.axis text {
+    display: none;
+  }
+
+  .domain {
+    display: none;
+  }
+
+  .y.axis text {
+    font-family: 'Proxima-Nova', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-anchor: end !important;
+    fill: #c12726;
+  }
+
+  .g-chart {
+    border-bottom: 1px solid #c3cddf;
+  }
+
+.english_fiction{fill: blue}
+.tabbable {margin-left:20px; border:1px solid gray}
+.active{margin-left:10px}
+.entity_table td {height:38px}
+
+.speech-bubble {
+	position: relative;
+	background: #00aabb;
+	border-radius: .4em;
+	padding: 20px;
+	left: 20px;
+	
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-right-color: #00aabb;
+	border-left: 0;
+	margin-top: -10px;
+	margin-left: -10px;
+}
+
+#mynetwork {
+  width: 600px;
+  height: 600px;
+  border: 1px solid lightgray;
+}
