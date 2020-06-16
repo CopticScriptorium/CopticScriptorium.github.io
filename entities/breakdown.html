@@ -142,7 +142,9 @@
       $(".m-tools").addClass('on');
     });
     $("#footer").load("../footer.html");
-	$("#footer img").each(function(){
+  });
+  $(document).ready(function(){
+  	$("#footer img").each(function(){
 		src = $(this).attr("src");
 		$(this).attr("src",src.replace(/.\/images/,"../images/"));
 	});
