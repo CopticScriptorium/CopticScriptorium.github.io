@@ -145,7 +145,7 @@
   });
   </script>
   <script>
-  $(document).ready(function(){
+  $(window).on("load",function(){
   	$("#footer img").each(function(){
 		src = $(this).attr("src");
 		$(this).attr("src",src.replace(/.\/images/,"../images/"));
