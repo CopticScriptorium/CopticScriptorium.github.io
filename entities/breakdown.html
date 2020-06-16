@@ -1,16 +1,54 @@
 <!DOCTYPE html>
-<!--  treemap based on http://bost.ocks.org/mike/treemap/ -->
-<html>
-<head>
+<html lang="en">
+  <head>
 <meta charset="utf-8">
 <title>Plotting Coptic Entities</title>
-<link href="bootstrap-combined.min.css" rel="stylesheet">
-<link rel="stylesheet" href="font-awesome.min.css"/>
-<link href="breakdown.css" rel="stylesheet">
+    <link href="bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome.min.css"/>
+    <link href="breakdown.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Asul:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global.css" type="text/css" charset="utf-8"/>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-55145025-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+<!--  treemap based on http://bost.ocks.org/mike/treemap/ -->
+
 </head>
 
 <body>
 <!--<div id="chart"></div>-->
+  <div id="wrapper">
+
+    <header id="header">
+
+    </header>
+
+    <section id="main">
+
+      <div class="container">
+
+        <div class="breadcrumb">
+          <a href="/tools">Tools</a>
+        </div>
+
+
+<!-- CONTENT STARTS HERE =============================== -->
+
+<div id="content">
 
 <script src="jquery-1.7.2.min.js"></script>
 <script src="d3.v3.min.js"></script>
@@ -79,6 +117,34 @@
         </script>
 
 <!--<script src="entity_type_proportions.js"></script>-->
+</div>
+
+
+
+<!-- END CONTENT ============================== -->
+
+  </section>
+
+
+    <footer id="footer">
+
+
+    </footer>
+
+
+  </div> <!-- /#wrapper -->
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script> 
+  $(function(){
+    //$("#navbar").load("nav.html");
+    $("#header").load("../header.html",function() {
+      $(".m-tools").addClass('on');
+    });
+    $("#footer").load("../footer.html");
+  });
+</script>
+
 
 </body>
 </html>
