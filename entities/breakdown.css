@@ -121,7 +121,9 @@ rect.parent {
   }
 
 .english_fiction{fill: blue}
-.tabbable {margin-left:20px; border:1px solid gray}
+.tabbable {margin-left:20px;}/* border:1px solid gray}*/
+.tab-content{border-left:1px solid gray;border-right:1px solid gray;border-bottom:1px solid gray}
+.nav{margin-bottom:0px !important}
 .active{margin-left:10px}
 .entity_table td {height:38px}
 
