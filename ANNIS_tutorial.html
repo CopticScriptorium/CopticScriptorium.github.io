@@ -735,5 +735,27 @@ function openTab(evt, tabName) {
 <li>Entity tagging guidelines are <a href="https://raw.githubusercontent.com/CopticScriptorium/entity-tagging/master/coptic_scriptorium_entity_guidelines.pdf">here</a></li>
 <li>For a complete list of ANNIS operators, see <a href="http://korpling.github.io/ANNIS/3.6/user-guide/aql-operators.html">the ANNIS documentation</a>. </li>
 </ul>
-</div></section></body>
+</div></section><!-- END CONTENT ============================== -->
+
+  </section>
+
+
+    <footer id="footer">
+
+
+    </footer>
+
+
+  </div> <!-- /#wrapper -->
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script> 
+  $(function(){
+    //$("#navbar").load("nav.html");
+    $("#header").load("header.html",function() {
+      $(".m-tools").addClass('on');
+    });
+    $("#footer").load("footer.html");
+  });
+</script></body>
 </html>
