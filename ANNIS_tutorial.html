@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SCRIPTORIUM | ANNIS tutorial</title>
+<link rel="stylesheet" href="css/global.css" type="text/css" charset="utf-8"/>
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" charset="utf-8"/>
+<link rel="stylesheet" href="css/tutorial.css" type="text/css" charset="utf-8"/>
+<link href="https://fonts.googleapis.com/css?family=Asul:400,700" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55145025-1', 'auto');
+  ga('send', 'pageview');
+
+    </script>
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+</head>
+<body class="home">
+
+  <div id="wrapper">
+
+    <header id="header">
+
+    </header>
+
+<section id="main">
+      <div class="container">
+      <h1>Using ANNIS for search in Coptic corpora</h1>
+<div class="sidenav"><ul>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#cheat-sheet">Cheat sheet</a>
+  <ul>
+    <li><a href="#single-words-tab">Single words</a></li>
+    <li><a href="#two-words-tab">Two words</a></li>
+    <li><a href="#three-words-tab">Three words</a></li>
+    <li><a href="#syntax-tab">Syntax</a></li>
+    <li><a href="#metadata-tab">Metadata</a></li>
+    <li><a href="#misc-tab">Misc</a></li>
+  </ul></li>
+  <li><a href="#words">Words</a>
+  <ul>
+    <li><a href="#where-are-the-words-in-coptic">Where are the words in Coptic?</a></li>
+    <li><a href="#how-to-search-for-norms-morphs-and-groups">How to search for norms, morphs and groups</a></li>
+    <li><a href="#using-orig-and-orig_group-for-orthographic-variants">Using orig and orig_group for orthographic variants</a></li>
+    <li><a href="#searching-for-lemmas">Searching for lemmas</a></li>
+    <li><a href="#wild-cards-and-regular-expressions">Wild cards and regular expressions</a></li>
+  </ul></li>
+  <li><a href="#tags">Tags</a>
+  <ul>
+    <li><a href="#the-part-of-speech-tagset">The part of speech tagset</a></li>
+    <li><a href="#searching-for-words-with-tags">Searching for words with tags</a></li>
+    <li><a href="#language-of-origin">Language of origin</a></li>
+  </ul></li>
+  <li><a href="#sequences">Sequences</a>
+  <ul>
+    <li><a href="#words-2">Words</a></li>
+    <li><a href="#words-and-annotations">Words and annotations</a></li>
+    <li><a href="#using-value-negation">Using value negation</a></li>
+  </ul></li>
+  <li><a href="#spans">Spans</a></li>
+  <li><a href="#metadata">Metadata</a></li>
+  <li><a href="#syntax">Syntax</a>
+  <ul>
+    <li><a href="#functions-and-dependencies">Functions and dependencies</a></li>
+    <li><a href="#full-list-of-func-labels">Full list of func labels</a></li>
+  </ul></li>
+  <li><a href="#frequencies">Frequencies</a></li>
+  <li><a href="#more">More</a></li>
+</ul>
+</div>
+<div><h2 class="tutorial-h2" id="introduction">Introduction</h2>
+
+<p>The ANNIS search and visualization platform offers highly complex search capabilities for texts provided by Coptic Scriptorium. To get started using ANNIS, go to: </p>
+
+<p><a href="https://corpling.uis.georgetown.edu/annis/scriptorium">https://annis.copticscriptorium.org/annis/scriptorium</a></p>
+
+<p>The interface shows a search box at the top left with Coptic works below, and some example queries on the right. All queries in this tutorial are linked to searches in the small <a href="https://copticscriptorium.org/treebank.html">Coptic Treebank</a>, but you can change this in the bottom left list. </p>
+
+<p><img src="img/interface.png" alt="ANNIS interface" title="ANNIS interface" /></p>
+
+<h2 class="tutorial-h2" id="cheat-sheet">Cheat sheet</h2>
+
+<p>Note searches are run on the Coptic Treebank only by default (you can select other/more corpora in ANNIS)</p>
+
+<div class="tab">
+<button class="tablinks active" onclick="openTab(event, 'tab-single-words')">Single words</button><button class="tablinks" onclick="openTab(event, 'tab-two-words')">Two words</button><button class="tablinks" onclick="openTab(event, 'tab-three-words')">Three words</button><button class="tablinks" onclick="openTab(event, 'tab-syntax')">Syntax</button><button class="tablinks" onclick="openTab(event, 'tab-metadata')">Metadata</button><button class="tablinks" onclick="openTab(event, 'tab-misc')">Misc</button>
+</div>
+
+<div id="tab-single-words" class="tabcontent" style="display:block">
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0i4rKn4rKJ4rKTIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm="<span class="anti">ⲧⲉⲓ</span>"</tt></a>  (standard form)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=b3JpZz0i4rKn4rKJ4rKJ4rKTIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>orig="<span class="anti">ⲧⲉⲉⲓ</span>"</tt></a> (form as spelled in manuscript)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bGVtbWE9IuKyoeKyieKykyI=&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>lemma="<span class="anti">ⲡⲉⲓ</span>"</tt></a> (dictionary entry)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0vLirisp_isqUv&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm=/.*<span class="anti">ⲟⲥ</span>/</tt></a> (form ends in -<span class="anti">ⲟⲥ</span>)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bGFuZz0iR3JlZWsi&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>lang="Greek"</tt></a> (all Greek origin words)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=cG9zPSJWU1RBVCI=&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>pos="VSTAT"</tt></a> (all stative verbs)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=cG9zPS9WLiov&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>pos=/V.*/</tt></a> (any kind of verb)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bW9ycGg9IuKymeKym-KypyI=&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>morph="<span class="anti">ⲙⲛⲧ</span>"</tt></a> (part of a complex unit)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybV9ncm91cD0i4rKZ4rKh4rKJ4rKt4rKj4rKT4rKl4rKn4rKf4rKlIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm_group="<span class="anti">ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ</span>"</tt></a> (whole bound group)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=b3JpZ19ncm91cD0i4rKZzIfisqHisonisq3vuKbisqXvuKYi&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>orig_group="<span class="anti">ⲙ̇ⲡⲉⲭ</span>︦<span class="anti">ⲥ</span>︦"</tt></a> (whole group as spelled)</li>
+</ul>
+
+</div>
+<div id="tab-two-words" class="tabcontent">
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0i4rKbz63ispMiIC4gbm9ybT0i4rKnIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm="<span class="anti">ⲛϭⲓ</span>" . norm="<span class="anti">ⲧ</span>"</tt></a> (<span class="anti">ⲛϭⲓ</span> followed by feminine article)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bGFuZz0iR3JlZWsiIC4gbGFuZz0iR3JlZWsi&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>lang="Greek" . lang="Greek"</tt></a> (two adjacent Greek words)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0v4rKb4rKn4rKf4rKVPy8gLjEsMyBsZW1tYT0i4rKh4rKJIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm=/<span class="anti">ⲛⲧⲟⲕ</span>?/ .1,3 lemma="<span class="anti">ⲡⲉ</span>"</tt></a> (<span class="anti">ⲛⲧⲟ</span> or <span class="anti">ⲛⲧⲟⲕ</span> followed by lemma <span class="anti">ⲡⲉ</span> within 3 tokens)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bGVtbWE9IuKygeKyqeKysSIgXjEsNSBsZW1tYT0i4rKf4rKbIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>lemma="<span class="anti">ⲁⲩⲱ</span>" ^1,5 lemma="<span class="anti">ⲟⲛ</span>"</tt></a> (the words <span class="anti">ⲁⲩⲱ</span> and <span class="anti">ⲟⲛ</span> within 5 tokens of each other)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=cG9zPSJOIiAuIHBvcz0iUFBFUk8i&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>pos="N" . pos="PPERO"</tt></a> (noun followed by clitic pronoun)</li>
+</ul>
+
+</div>
+<div id="tab-three-words" class="tabcontent">
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0i4rKBIiAuIG5vcm09Is-lIiAuIG5vcm09IuKypeKyseKyp-KymSI=&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm="<span class="anti">ⲁ</span>" . norm="<span class="anti">ϥ</span>" . norm="<span class="anti">ⲥⲱⲧⲙ</span>"</tt></a> (the sequence <span class="anti">ⲁ</span>-<span class="anti">ϥ</span>-<span class="anti">ⲥⲱⲧⲙ</span>)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bGVtbWE9IuKyn-KyqSIgLiBub3JtPSLisonisoPisp_ispciIC4gbGVtbWE9Is-p4rKbIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>lemma="<span class="anti">ⲟⲩ</span>" . norm="<span class="anti">ⲉⲃⲟⲗ</span>" . lemma="<span class="anti">ϩⲛ</span>"</tt></a> (<span class="anti">ⲟⲩ</span>-<span class="anti">ⲉⲃⲟⲗ</span> followed by lemma <span class="anti">ϩⲛ</span>) </li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0i4rKjIiAuIGxlbW1hPSLisqEiIC4gcG9zPSJOIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm="<span class="anti">ⲣ</span>" . lemma="<span class="anti">ⲡ</span>" . pos="N"</tt></a> (<span class="anti">ⲣ</span>, definite article, Noun)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0i4rKJIiAuIHBvcz0iViIgLiBwb3M9IlBQRVJPIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm="<span class="anti">ⲉ</span>" . pos="V" . pos="PPERO"</tt></a> (to-infinitive followed by clitic pronoun)</li>
+</ul>
+
+</div>
+<div id="tab-syntax" class="tabcontent">
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=ZnVuYz0iYWNsOnJlbGNsIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>func="acl:relcl"</tt></a> (relative clauses)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=cG9zPSJWIiAtPmRlcCBmdW5jPSJkaXNsb2NhdGVkIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>pos="V" ->dep func="dislocated"</tt></a> (verb governing a dislocated argument)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=cG9zPSJWIiAtPmRlcCBmdW5jPSJkaXNsb2NhdGVkIiAmICMyIC4qICMx&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>pos="V" ->dep func="dislocated" &amp; #2 .* #1</tt></a> (verb governing a dislocated argument which precedes the verb)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0i4rKJ4rKD4rKf4rKXIiAuIGxlbW1hPSLPqeKymyIgXz1fIGZ1bmM9ImZpeGVkIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm="<span class="anti">ⲉⲃⲟⲗ</span>" . lemma="<span class="anti">ϩⲛ</span>" _=_ func="fixed"</tt></a> (the fixed expression <span class="anti">ⲉⲃⲟⲗ</span> <span class="anti">ϩⲛ</span> meaning 'out-of')</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0i4rKJ4rKD4rKf4rKXIiAuIGxlbW1hPSLPqeKymyIgXz1fIGZ1bmM9ImNhc2Ui&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm="<span class="anti">ⲉⲃⲟⲗ</span>" . lemma="<span class="anti">ϩⲛ</span>" _=_ func="case"</tt></a> (<span class="anti">ⲉⲃⲟⲗ</span> followed by a separate <span class="anti">ϩⲛ</span> meaning 'out ... in')</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0vLirispkvIF89XyBsZW1tYT0vLirispsvIF89XyBwb3M9IlBSRVAi&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm=/.*<span class="anti">ⲙ</span>/ _=_ lemma=/.*<span class="anti">ⲛ</span>/ _=_ pos="PREP"</tt></a> (preposition ending in -<span class="anti">ⲙ</span> with lemma in -<span class="anti">ⲛ</span>)</li>
+</ul>
+
+</div>
+<div id="tab-metadata" class="tabcontent">
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bGFuZz0iTGF0aW4iICYgbWV0YTo6bXNOYW1lPS9NT05CLiov&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>lang="Latin" &amp; meta::msName=/MONB.*/</tt></a> (Latin words in MONB manuscripts from the White Monastery)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0i4rKb4rKf4rKp4rKn4rKJIiAmIG1ldGE6OmFubm90YXRpb249Ly4qS3Jhd2llYy4qLw==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm="<span class="anti">ⲛⲟⲩⲧⲉ</span>" &amp; meta::annotation=/.*Krawiec.*/</tt></a> (the word <span class="anti">ⲛⲟⲩⲧⲉ</span> in documents edited by Rebecca Krawiec)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=dHJhbnNsYXRpb249Ly4qTG9yZC4qLyAmIG1ldGE6OnRyYW5zbGF0aW9uPS8uKkJ1ZGdlLiov&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>translation=/.*Lord.*/ &amp; meta::translation=/.*Budge.*/</tt></a> (the word 'Lord' in translations by Budge)</li>
+</ul>
+
+</div>
+<div id="tab-misc" class="tabcontent">
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=aGlfcmVuZD0iZWt0aGV0aWMi&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>hi_rend="ekthetic"</tt></a> (ekthetic letters)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=dHJhbnNsYXRpb24gX2xfIGhpX3JlbmQ9ImVrdGhldGljIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>translation _l_ hi_rend="ekthetic"</tt></a>  (ekthetic and sentence initial)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=dHJhbnNsYXRpb24gX2xfIHRvayAuKiBoaV9yZW5kPSJla3RoZXRpYyIgJiAjMSBfaV8gIzM=&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>translation _l_ tok .* hi_rend="ekthetic" &amp; #1 _i_ #3</tt></a> (ekthetic and non-sentence initial)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm90ZT0vLipzaWMuKi8=&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>note=/.*sic.*/</tt></a> (note annotation indicating scribal error)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bW9ycGg9IuKyoyIgLiBtb3JwaCBfPV8gbGFuZz0iR3JlZWsi&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>morph="<span class="anti">ⲣ</span>" . morph _=_ lang="Greek"</tt></a> (complex verb in <span class="anti">ⲣ</span> + Greek stem)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bGJfbiBfaV8gbm9ybV9ncm91cD0vLirisrEuKi8gJiBsYl9uIF9pXyBub3JtX2dyb3VwPS8uKuKygeKyoc-rLiovICYgIzEgLiAjMw==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>lb_n _i_ norm_group=/.*<span class="anti">ⲱ</span>.*/ &amp; lb_n _i_ norm_group=/.*<span class="anti">ⲁⲡϫ</span>.*/ &amp; #1 . #3</tt></a> (two consecutive lines, the first containing <span class="anti">ⲱ</span> and the second <span class="anti">ⲁⲡϫ</span>)</li>
+</ul>
+
+</div>
+<h2 class="tutorial-h2" id="words">Words</h2>
+
+<h3 class="tutorial-h3" id="where-are-the-words-in-coptic">Where are the words in Coptic?</h3>
+
+<p>Words in Coptic can be complex, and the fact that manuscripts use various spellings for words complicates things further. Some terminology can help:</p>
+
+<ul>
+<li><strong>Bound groups</strong> - these are the Coptic units we are used to seeing written between spaces, for example <span class="anti">ⲁϥⲥⲱⲧⲙ</span> 'he has heard' is a bound group</li>
+<li><strong>Norm units</strong> - these are the components of bound groups, some of which can appear by themselves (like <span class="anti">ⲥⲱⲧⲙ</span> 'hear' above) and some of which always appear bound (like the past tense marker <span class="anti">ⲁ</span>). Norm units always have a part of speech, such as being a noun (N) or a verb (V), or even an auxiliary in the case of <span class="anti">ⲁ</span>.</li>
+<li><strong>Morphs</strong> - these units are prefixes or suffixes smaller than norm units, and do not have their own part of speech, for example the complex norm unit <span class="anti">ⲙⲛⲧ</span>-<span class="anti">ⲁⲧ</span>-<span class="anti">ⲥⲱⲧⲙ</span> 'disobedience' has three morphs: the abstract prefix <span class="anti">ⲙⲛⲧ</span> (a little like English -ness), <span class="anti">ⲁⲧ</span> (like dis-) and <span class="anti">ⲥⲱⲧⲙ</span>. Notice that although <span class="anti">ⲥⲱⲧⲙ</span> is usually a norm unit (a verb), in this case it is only a smaller morph, since it is part of a bigger noun.</li>
+</ul>
+
+<p>Use the cheat sheet for some commonly used query types, as well as the explanations below. Also see our <a href="https://copticscriptorium.org/download/scriptorium_guidelines_overview.pdf">overview of annotation guidelines</a> for some common annotation practices. </p>
+
+<h3 class="tutorial-h3" id="how-to-search-for-norms-morphs-and-groups">How to search for norms, morphs and groups</h3>
+
+<p>You can search for norm units, groups and morphs in ANNIS like this:</p>
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0i4rKl4rKx4rKn4rKZIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm="<span class="anti">ⲥⲱⲧⲙ</span>"</li></tt></a></li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybV9ncm91cD0i4rKBz6XisqXisrHisqfispki&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm_group="<span class="anti">ⲁϥⲥⲱⲧⲙ</span>"</li></tt></a></li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bW9ycGg9IuKymeKym-KypyI=&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>morph="<span class="anti">ⲙⲛⲧ</span>"</li></tt></a></li>
+</ul>
+
+<p>Enter the query in the query box and click <em>Search</em> or hit ctrl+Enter (or click the link above). Once you have a search result, you can view all of the available annotations for each result by expanding the [+] next to each annotation layer. Expanding the annotations grid will show you the available annotation layers that can be searched for, such as norm and morph below.</p>
+
+<p><img src="img/grid.png" alt="annotation grid" title="annotation grid" /></p>
+
+<h3 class="tutorial-h3" id="using-orig-and-orig_group-for-orthographic-variants">Using orig and orig_group for orthographic variants</h3>
+
+<p>Sometimes we want to search not for <strong>norm</strong> units, but for original spellings found in manuscripts. You can use the following queries to find specific spellings, including supralinear strokes and other diacritics:</p>
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=b3JpZz0i4rKl4rKx4rKn4rKZzIQi&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>orig="<span class="anti">ⲥⲱⲧⲙ̄</span>"</li></tt></a></li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=b3JpZ19ncm91cD0i4rKBz6XisqXisrHisqfispnMhCI=&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>orig_group="<span class="anti">ⲁϥⲥⲱⲧⲙ̄</span>"</li></tt></a></li>
+</ul>
+
+<p>Note that diacritics will always be removed in the norm annotations, but will be retained in orig if available in the original transcription. After you have run a search, you can also toggle the visualization between original and normalized spelling by choosing the <strong>Base text</strong> drop down at the top of your search results and switching between norm_group (the default) and orig_group. It is also possible to switch to norm or orig, to see the text segmented into units, rather than bound groups.</p>
+
+<h3 class="tutorial-h3" id="searching-for-lemmas">Searching for lemmas</h3>
+
+<p>If you want to find all forms of an inflected word, you can search for lemmas instead of norm forms. For example:</p>
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bGVtbWE9IuKyleKyseKypyI=&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>lemma="<span class="anti">ⲕⲱⲧ</span>"</li></tt></a></li>
+</ul>
+
+<p>This search finds the absolute form <span class="anti">ⲕⲱⲧ</span>, but also the reduced form "<span class="anti">ⲕⲟⲧ</span>" and even the stative form "<span class="anti">ⲕⲏⲧ</span>", which all have the same lemma or dictionary entry. In the annotation grid, lemmas are clickable and link to a search in the <a href="coptic-dictionary.org/">Coptic Dictionary Online</a>.</p>
+
+<h3 class="tutorial-h3" id="wild-cards-and-regular-expressions">Wild cards and regular expressions</h3>
+
+<p>Sometimes it can be useful to search for units or bound group containing some letter or letters. We can do this using wildcard, or 'regular expression' searches. You can run such a search on any annotation layer by using slashes instead of double quotes, and the following operators:</p>
+
+<ul>
+<li><strong><code>.</code></strong> - any single character</li>
+<li><strong><code>?</code></strong> - makes the preceding character optional</li>
+<li><strong><code>*</code></strong> - the preceding character any number of times (including zero times)</li>
+</ul>
+
+<p>For example, you can run these searches:</p>
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0v4rKlLuKyp-KyoS8=&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm=/<span class="anti">ⲥ</span>.<span class="anti">ⲧⲡ</span>/</li></tt></a></li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybV9ncm91cD0v4rKJP-Kym-Kypy4qLw==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm_group=/<span class="anti">ⲉ</span>?<span class="anti">ⲛⲧ</span>.*/</li></tt></a></li>
+</ul>
+
+<p>The first example searches for words like <span class="anti">ⲥⲱⲧⲡ</span>, <span class="anti">ⲥⲟⲧⲡ</span> or <span class="anti">ⲥⲉⲧⲡ</span>, with the dot indicating 'any character'. The second example searches for groups beginning with <span class="anti">ⲉⲛⲧ</span> or <span class="anti">ⲛⲧ</span> (the <span class="anti">ⲉ</span> is made optional by the '?'), and may end with anything - <code>.*</code> means any character, any number of times, so it allows the group to end in any way. </p>
+
+<p>There are more regular expression operators available - for more information on regular expression operators, see <a href="http://www.regular-expressions.info/">http://www.regular-expressions.info/</a>.</p>
+
+<h2 class="tutorial-h2" id="tags">Tags</h2>
+
+<p>Coptic Scriptorium data is annotated with grammatical parts of speech for every norm/orig unit. </p>
+
+<h3 class="tutorial-h3" id="the-part-of-speech-tagset">The part of speech tagset</h3>
+
+<p>The possible parts of speech are divided into coarse categories, which can be searched for using regular expressions:</p>
+
+<table class="table table-striped">
+<thead>
+<tr>
+  <th>Tag</th>
+  <th>Name</th>
+  <th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>A.*</td>
+  <td>Auxiliary</td>
+  <td><span class="anti">ⲁ</span>[<span class="anti">ϥ</span>], <span class="anti">ⲙⲉ</span>[<span class="anti">ϥ</span>], <span class="anti">ⲧⲣⲉ</span>[<span class="anti">ϥ</span>], ...</td>
+</tr>
+<tr>
+  <td>ADV</td>
+  <td>Adverb</td>
+  <td><span class="anti">ⲉⲃⲟⲗ</span>, <span class="anti">ⲟⲛ</span>, <span class="anti">ⲡⲱⲥ</span></td>
+</tr>
+<tr>
+  <td>ART</td>
+  <td>Article</td>
+  <td><span class="anti">ⲡ</span>(<span class="anti">ⲉ</span>), <span class="anti">ⲧ</span>(<span class="anti">ⲉ</span>), <span class="anti">ⲛ</span>(<span class="anti">ⲉ</span>), <span class="anti">ϩⲉⲛ</span>, <span class="anti">ⲕⲉ</span></td>
+</tr>
+<tr>
+  <td>C.*</td>
+  <td>Converter</td>
+  <td><span class="anti">ⲉ</span>, <span class="anti">ⲉⲧⲉ</span>, <span class="anti">ⲛⲉ</span>, ...</td>
+</tr>
+<tr>
+  <td>CONJ</td>
+  <td>Conjunction</td>
+  <td><span class="anti">ⲁⲩⲱ</span>, <span class="anti">ϫⲉ</span>, <span class="anti">ⲏ</span>, <span class="anti">ⲙⲏ</span>, <span class="anti">ⲉⲓⲧⲉ</span>, ...</td>
+</tr>
+<tr>
+  <td>COP</td>
+  <td>Copula</td>
+  <td><span class="anti">ⲡⲉ</span>/<span class="anti">ⲧⲉ</span>/<span class="anti">ⲛⲉ</span></td>
+</tr>
+<tr>
+  <td>EXIST</td>
+  <td>Existential/possessive</td>
+  <td><span class="anti">ⲟⲩⲛ</span>/<span class="anti">ⲙⲛ</span></td>
+</tr>
+<tr>
+  <td>FM</td>
+  <td>Foreign material</td>
+  <td><span class="anti">ⲡⲁⲣⲁ</span> <span class="anti">ⲧⲟⲩⲧⲟ</span></td>
+</tr>
+<tr>
+  <td>FUT</td>
+  <td>Future</td>
+  <td><span class="anti">ⲛⲁ</span></td>
+</tr>
+<tr>
+  <td>IMOD</td>
+  <td>Inflected modifier</td>
+  <td><span class="anti">ⲧⲏⲣ</span>[<span class="anti">ϥ</span>], <span class="anti">ϩⲱⲱ</span>[<span class="anti">ⲧ</span>], ...</td>
+</tr>
+<tr>
+  <td>N.*</td>
+  <td>Noun</td>
+  <td><span class="anti">ⲁⲑⲏⲧ</span>, <span class="anti">ⲣⲱⲙⲉ</span>, <span class="anti">ⲁⲣⲭⲏ</span>, ...</td>
+</tr>
+<tr>
+  <td>NEG</td>
+  <td>Negation</td>
+  <td><span class="anti">ⲛ</span>, <span class="anti">ⲁⲛ</span>, <span class="anti">ⲧⲙ</span>[<span class="anti">ⲥⲱⲧⲙ</span>]</td>
+</tr>
+<tr>
+  <td>NUM</td>
+  <td>Numeral</td>
+  <td><span class="anti">ⲟⲩⲁ</span>, <span class="anti">ⲥⲛⲁⲩ</span>, ...</td>
+</tr>
+<tr>
+  <td>PDEM</td>
+  <td>Pronoun, demonstrative</td>
+  <td><span class="anti">ⲡⲉⲓ</span>/<span class="anti">ⲡⲁⲓ</span>, <span class="anti">ⲧⲉⲓ</span>/<span class="anti">ⲧⲁⲓ</span>, <span class="anti">ⲛⲉⲓ</span>/<span class="anti">ⲛⲁⲓ</span></td>
+</tr>
+<tr>
+  <td>PINT</td>
+  <td>Pronoun, interrogative</td>
+  <td><span class="anti">ⲟⲩ</span>, <span class="anti">ⲛⲓⲙ</span></td>
+</tr>
+<tr>
+  <td>PPER.*</td>
+  <td>Pronoun, personal</td>
+  <td><span class="anti">ϥ</span>,<span class="anti">ⲥ</span>,<span class="anti">ⲓ</span>,<span class="anti">ϯ</span>,<span class="anti">ⲛ</span>,<span class="anti">ⲁⲛⲟⲕ</span>,<span class="anti">ⲁⲛⲅ̄</span>,...</td>
+</tr>
+<tr>
+  <td>PPOS</td>
+  <td>Pronoun, possessive</td>
+  <td><span class="anti">ⲡⲉϥ</span>,<span class="anti">ⲧⲉⲧⲛ̄</span>,<span class="anti">ⲡⲟⲩ</span>,<span class="anti">ⲡⲁ</span>,<span class="anti">ⲡⲱⲓ</span>,...</td>
+</tr>
+<tr>
+  <td>PREP</td>
+  <td>Preposition</td>
+  <td><span class="anti">ⲉⲧⲃⲉ</span>, <span class="anti">ϩⲛ̄</span>, <span class="anti">ⲛ</span>, <span class="anti">ⲙ̄ⲙⲟ</span>[<span class="anti">ϥ</span>], ...</td>
+</tr>
+<tr>
+  <td>PTC</td>
+  <td>Particle</td>
+  <td><span class="anti">ⲇⲉ</span>, <span class="anti">ⲛ̄ϭⲓ</span>, ...</td>
+</tr>
+<tr>
+  <td>PUNCT</td>
+  <td>Punctuation</td>
+  <td>. , · ...</td>
+</tr>
+<tr>
+  <td>UNKNOWN</td>
+  <td>Unknown, lacuna</td>
+  <td><span class="anti">ⲃ</span>_ _ _, _ _<span class="anti">ⲟⲥ</span>, _ _ _, ...</td>
+</tr>
+<tr>
+  <td>V.*</td>
+  <td>Verb</td>
+  <td><span class="anti">ⲥⲱⲧⲙ</span>, <span class="anti">ⲥⲱⲧⲡ</span>, <span class="anti">ⲥⲟⲧⲡ</span>, <span class="anti">ⲉⲓⲣⲉ</span>, <span class="anti">ⲟ</span>, <span class="anti">ⲁⲣⲓ</span>, ...</td>
+</tr>
+<tr>
+  <td>VBD</td>
+  <td>Verboid</td>
+  <td><span class="anti">ⲛⲁⲛⲟⲩ</span>[<span class="anti">ϥ</span>], <span class="anti">ⲡⲉϫⲁ</span>[<span class="anti">ϥ</span>], <span class="anti">ⲡⲉϫⲉ</span>,...</td>
+</tr>
+</tbody>
+</table>
+
+<p>Each of the tags containing wild cards stands for multiple options, for example <code>V.*</code> encompasses <code>V</code> (a regular verb), <code>VSTAT</code> (stative verb) and <code>VIMP</code> (inflected imperative verbs). For complete documentation of fine-grained POS tags, see <a href="https://github.com/CopticScriptorium/tagger-part-of-speech/blob/master/scriptorium_tagset_documentation.pdf">the documentation</a>.</p>
+
+<h3 class="tutorial-h3" id="searching-for-words-with-tags">Searching for words with tags</h3>
+
+<p>Some example searches using wild cards for coarse POS or exact matches for fine POS categories:</p>
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=cG9zPS9WLiov&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>pos=/V.*/</tt></a> (any verb)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=cG9zPSJWIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>pos="V"</tt></a> (only normal verbs)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=cG9zPSJWU1RBVCI=&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>pos="VSTAT"</tt></a> (only stative verbs)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=cG9zPS9QUEVSLi8=&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>pos=/PPER./</tt></a> (any personal pronoun)</li>
+</ul>
+
+<p>We can combine the search for words and tags using the operator <code>_=_</code>, which mean 'in the same place' or 'covering the same span of text'. For example, the following searches for verbs starting with <span class="anti">ⲣ</span>:</p>
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=cG9zPSJWIiBfPV8gbm9ybT0v4rKjLiov&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>pos="V" _=_ norm=/<span class="anti">ⲣ</span>.*/</li></tt></a></li>
+</ul>
+
+<h3 class="tutorial-h3" id="language-of-origin">Language of origin</h3>
+
+<p>For words of foreign origin, Scriptorium tags the earliest language of origin using <code>lang</code>, as follows:</p>
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bGFuZz0iR3JlZWsi&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>lang="Greek"</li></tt></a></li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bGFuZz0iTGF0aW4i&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>lang="Latin"</li></tt></a></li>
+</ul>
+
+<p>Note that Hebrew origin names, such as <span class="anti">ⲁⲃⲓⲙⲉⲗⲉⲭ</span> are tagged as Hebrew, not Greek. It is also possible to combine language of origin with part of speech, for example to find verbs of Greek origin:</p>
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=cG9zPSJWIiBfPV8gbGFuZz0iR3JlZWsi&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>pos="V" _=_ lang="Greek"</li></tt></a></li>
+</ul>
+
+<p>Note also that if a verb is complex, such as <span class="anti">ⲣ</span>-<span class="anti">ⲭⲣⲉⲓⲁ</span>, the search above <strong>will not</strong> find it, since not the entire word is Greek. In such cases, only a search on the <code>morph</code> level will recover the Greek language of origin. See more about searching within spans under 'Searching for longer span annotations'.</p>
+
+<h2 class="tutorial-h2" id="sequences">Sequences</h2>
+
+<p>To search for multiple words or bound groups we must specify the order in which they appear, and possibly the distance. Sequences of words and annotations work similarly, and can be mixed freely.</p>
+
+<h3 class="tutorial-h3" id="words-2">Words</h3>
+
+<p>The following queries illustrate searching for two adjacent norm units, three norm units, two adjacent bound groups, etc. The operator <code>.</code> indicates that two search terms are adjacent:</p>
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0i4rKBIiAuIG5vcm09Is-lIiAuIG5vcm09IuKyg-KyseKylSI=&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm="<span class="anti">ⲁ</span>" . norm="<span class="anti">ϥ</span>" . norm="<span class="anti">ⲃⲱⲕ</span>"</li></tt></a></li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0i4rKBIiAuIG5vcm09Is-lIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm="<span class="anti">ⲁ</span>" . norm="<span class="anti">ϥ</span>"</li></tt></a></li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybV9ncm91cD0v4rKBz6UuKi8gLiBub3JtX2dyb3VwPSLisp_ispsi&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm_group=/<span class="anti">ⲁϥ</span>.*/ . norm_group="<span class="anti">ⲟⲛ</span>"</li></tt></a></li>
+</ul>
+
+<p>We can also specify a range of possible distances between words, for example the auxiliary <span class="anti">ⲁ</span> followed by <span class="anti">ⲇⲉ</span> within 1-10 tokens:</p>
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0i4rKBIiAuMSwxMCBub3JtPSLisofisoki&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm="<span class="anti">ⲁ</span>" .1,10 norm="<span class="anti">ⲇⲉ</span>"</li></tt></a></li>
+</ul>
+
+<p>If order does not matter, we can use the operator <code>^</code> instead, which can be used with or without token ranges, just like <code>.</code>:</p>
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0i4rKBIiBeIG5vcm09IuKyh-KyiSI=&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm="<span class="anti">ⲁ</span>" ^ norm="<span class="anti">ⲇⲉ</span>"</tt></a> (<span class="anti">ⲁ</span> followed by <span class="anti">ⲇⲉ</span> or the opposite order)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0i4rKBIiBeMSwxMCBub3JtPSLisofisoki&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm="<span class="anti">ⲁ</span>" ^1,10 norm="<span class="anti">ⲇⲉ</span>"</tt></a> (<span class="anti">ⲁ</span> and <span class="anti">ⲇⲉ</span> within 10 tokens of each other, in either order)</li>
+</ul>
+
+<p>If we don't care how far two terms are, we can also use <code>.*</code> ('any distance forward') and <code>^*</code> ('any distance in any direction').</p>
+
+<h3 class="tutorial-h3" id="words-and-annotations">Words and annotations</h3>
+
+<p>Combining annotation and word search is possible too:</p>
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0i4rKbIiBfPV8gcG9zPSJQUkVQIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm="<span class="anti">ⲛ</span>" _=_ pos="PREP"</li></tt></a></li>
+</ul>
+
+<p>This finds the norm unit <span class="anti">ⲛ</span>, but only if it is also tagged as PREP.</p>
+
+<h3 class="tutorial-h3" id="using-value-negation">Using value negation</h3>
+
+<p>Sometimes it makes sense to ask for all values <em>except</em> for something, usually in combination with some positive search. You can negate values with <code>!=</code> instead of <code>=</code>:</p>
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0i4rKbIiBfPV8gcG9zIT0iUFJFUCI=&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm="<span class="anti">ⲛ</span>" _=_ pos!="PREP"</li></tt></a></li>
+</ul>
+
+<p>This finds all cases of the norm unit <span class="anti">ⲛ</span> which are not prepositions.</p>
+
+<h2 class="tutorial-h2" id="spans">Spans</h2>
+
+<p>If you look at an annotation grid for any search result, you will notice longer span annotations, such as <code>translation</code>, <code>entity</code> or <code>multiword</code>, which give translations, entity types (person, place etc.) and multiword expressions respectively. Searching for these by themselves works as usual with both exact and wildcard searches, as well as multiple adjacent spans with <code>.</code>:</p>
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=ZW50aXR5PSJwbGFjZSI=&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>entity="place"</tt></a> (find all place annotations)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=dHJhbnNsYXRpb249Ly4qW0JiXWVsaWV2ZS4qLw==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>translation=/.*[Bb]elieve.*/</tt></a> (find all translations containing 'believe', lower or upper case)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=ZW50aXR5PSJwZXJzb24iIC4gZW50aXR5IT0icGVyc29uIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>entity="person" . entity!="person"</tt></a> (find a person entity followed by a non-person entity)</li>
+</ul>
+
+<p>However sometimes we want to express complex overlap relations between spans, such as a translation or entity span containing a certain word. For example, we can find instances of <span class="anti">ⲉⲓⲱⲧ</span> meaning 'barley' rather than 'father' in two different ways, using the operator <code>_i_</code>, which means that one span includes another (i.e. the second span is nested and smaller or equal to the first one:</p>
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=dHJhbnNsYXRpb249Ly4qYmFybGV5LiovIF9pXyBsZW1tYT0i4rKJ4rKT4rKx4rKnIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>translation=/.*barley.*/ _i_ lemma="<span class="anti">ⲉⲓⲱⲧ</span>"</li></tt></a></li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=ZW50aXR5PSJwbGFudCIgX2lfIGxlbW1hPSLisonispPisrHisqci&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>entity="plant" _i_ lemma="<span class="anti">ⲉⲓⲱⲧ</span>"</li></tt></a></li>
+</ul>
+
+<h2 class="tutorial-h2" id="metadata">Metadata</h2>
+
+<p>You can see what metadata a corpus or document has by clicking on the i-button for that corpus, or for the search result that comes from a particular document:</p>
+
+<p><img src="img/meta.png" style="width: 300px" alt="metadata" title="metadata" /></p>
+
+<p>To search using metadata criteria, just use the annotation name and value after the prefix <code>meta::</code> and add them to your query with <code>&amp;</code> like this (regular expression wildcards work as usual):</p>
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0iz6PisonisonisqPisokiICYgbWV0YTo6bXNOYW1lPSJNT05CLllBIg==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm="<span class="anti">ϣⲉⲉⲣⲉ</span>" &amp; meta::msName="MONB.YA"</li></tt></a></li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bm9ybT0iz6PisonisonisqPisokiICYgbWV0YTo6bXNOYW1lPS9NT05CLiov&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>norm="<span class="anti">ϣⲉⲉⲣⲉ</span>" &amp; meta::msName=/MONB.*/</li></tt></a></li>
+</ul>
+
+<h2 class="tutorial-h2" id="syntax">Syntax</h2>
+
+<h3 class="tutorial-h3" id="functions-and-dependencies">Functions and dependencies</h3>
+
+<p>Norm units in each sentence are connected by dependencies which express their grammatical functions. To search for these functions, you can use the <code>func</code> annotation, for example to search for nominal or clausal subjects (<code>nsubj</code> and <code>csubj</code>), or objects (<code>obj</code>):</p>
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=ZnVuYz0vLnN1Ymov&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>func=/.subj/</tt></a> (find both nominal and clausal subjects)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=ZnVuYz0vb2JqLw==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>func=/obj/</tt></a> (find direct objects)</li>
+</ul>
+
+<p>You can see how these functions connect to other words by expanding the syntax visualization (the complete list of grammatical functions can be found in the <a href="https://universaldependencies.org/cop/dep/">Coptic Universal Dependencies Documentation</a>).</p>
+
+<p><img src="img/deps.png" style="width: 200px" alt="syntactic dependencies" title="syntactic dependencies" /></p>
+
+<p>Using the dependency relation operator <code>-&gt;dep</code> we can also constrain functions to attach to certain words or parts of speech, for example to search for objects of the verb <span class="anti">ϯ</span> 'give', or for cases of fronted dislocated arguments (e.g. "Me, I haven't seen him"):</p>
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bGVtbWE9Is-vIiAtPmRlcCBmdW5jPSJvYmoi&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>lemma="<span class="anti">ϯ</span>" ->dep func="obj"</tt></a> (the verb <span class="anti">ϯ</span> and the object it governs)</li>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=cG9zPSJWIiAtPmRlcCBmdW5jPSJkaXNsb2NhdGVkIiAmICMyIC4qICMx&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>pos="V" ->dep func="dislocated" &amp; #2 .* #1</tt></a> (a Verb and its dislocated argument, which precedes the verb)</li>
+</ul>
+
+<p>In the second example, we want to specify both the dislocated dependency between the two search terms (with <code>-&gt;dep</code>) and the ordering (dislocated argument precedes verb). Since we cannot use two operators simultaneously, we add a condition using <code>&amp;</code>, then specify that the second term we declated (<code>func="dislocated"</code>, now referred to as <code>#2</code>) should precede (<code>.*</code>) the first thing we declared (the verb, now <code>#1</code>).</p>
+
+<h3 class="tutorial-h3" id="full-list-of-func-labels">Full list of func labels</h3>
+
+<table class="table table-striped">
+<thead>
+<tr>
+  <th>label</th>
+  <th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>acl</td>
+  <td>adjunct adnominal clause predicate ([<span class="anti">ⲧⲉⲝⲟⲩⲥⲓⲁ</span> <span class="anti">ⲉⲧⲣⲁ</span>]<span class="anti">ⲙⲟⲟϣⲉ</span>)</td>
+</tr>
+<tr>
+  <td>acl:relcl</td>
+  <td>relative clause predicate ([<span class="anti">ⲉⲛⲧⲁϥ</span>]<span class="anti">ⲥⲱⲧⲡ</span>)</td>
+</tr>
+<tr>
+  <td>advcl</td>
+  <td>adverbial clause predicate ([<span class="anti">ⲉⲃⲟⲗ</span> <span class="anti">ϫⲉ</span> <span class="anti">ϯ</span>] <span class="anti">ⲙⲙⲁⲩ</span>)</td>
+</tr>
+<tr>
+  <td>advmod</td>
+  <td>adverb (<span class="anti">ⲙⲙⲁⲩ</span>, <span class="anti">ⲕⲁⲗⲱⲥ</span>)</td>
+</tr>
+<tr>
+  <td>amod</td>
+  <td>adjectival modifier ([<span class="anti">ϣⲏⲣⲉ</span>] <span class="anti">ϣⲏⲙ</span>)</td>
+</tr>
+<tr>
+  <td>appos</td>
+  <td>apposition ([<span class="anti">ⲡⲣⲣⲟ</span>, ] <span class="anti">ⲇⲓⲟⲕⲗⲏϯⲁⲛⲟⲥ</span>)</td>
+</tr>
+<tr>
+  <td>aux</td>
+  <td>auxiliary (<span class="anti">ⲁ</span>, <span class="anti">ⲙⲡⲉ</span>, <span class="anti">ϣⲁⲣⲉ</span>)</td>
+</tr>
+<tr>
+  <td>case</td>
+  <td>case marker such as a preposition (<span class="anti">ϩⲛ</span>, <span class="anti">ⲛ</span>)</td>
+</tr>
+<tr>
+  <td>cc</td>
+  <td>coordinating conjunction (<span class="anti">ⲁⲩⲱ</span>, <span class="anti">ⲏ</span>, <span class="anti">ⲙⲛ</span>)</td>
+</tr>
+<tr>
+  <td>ccomp</td>
+  <td>complement clause predicate ([<span class="anti">ⲡⲉϫⲁϥ</span> <span class="anti">ϫⲉ</span>]<span class="anti">ⲁⲛⲁⲩ</span>)</td>
+</tr>
+<tr>
+  <td>compound</td>
+  <td>part of compound word, usually a complex number (<span class="anti">ⲙⲏⲧ</span> [<span class="anti">ⲛϣⲉ</span>])</td>
+</tr>
+<tr>
+  <td>conj</td>
+  <td>coordinate head ([<span class="anti">ϩⲉⲛϣⲏⲧⲉ</span> <span class="anti">ⲙⲛ</span> <span class="anti">ϩⲉⲛ</span>]<span class="anti">ϣⲉⲉⲣⲉ</span>)</td>
+</tr>
+<tr>
+  <td>cop</td>
+  <td>copula dependent of predicate ([<span class="anti">ⲟⲩ</span> <span class="anti">ⲣⲱⲙⲉ</span>] <span class="anti">ⲡⲉ</span>)</td>
+</tr>
+<tr>
+  <td>csubj</td>
+  <td>clausal subject ([<span class="anti">ϣϣⲉ</span> <span class="anti">ⲉ</span>]<span class="anti">ϣⲗⲏⲗ</span>)</td>
+</tr>
+<tr>
+  <td>dep</td>
+  <td>unspecified dependency/other</td>
+</tr>
+<tr>
+  <td>det</td>
+  <td>article or other determiner (<span class="anti">ⲟⲩ</span>, <span class="anti">ⲡⲉⲓ</span>)</td>
+</tr>
+<tr>
+  <td>discourse</td>
+  <td>interjections (<span class="anti">ⲱ</span>, <span class="anti">ϩⲁⲙⲏⲛ</span>)</td>
+</tr>
+<tr>
+  <td>dislocated</td>
+  <td>second realization of argument out of place ([<span class="anti">ⲡ</span>]<span class="anti">ⲣⲱⲙⲉ</span> [<span class="anti">ⲁϥⲥⲱⲧⲙ</span>], [<span class="anti">ⲁϥⲥⲱⲧⲙ</span> <span class="anti">ⲛϭⲓⲡ</span>]<span class="anti">ⲣⲱⲙⲉ</span>)</td>
+</tr>
+<tr>
+  <td>fixed</td>
+  <td>non-initial token in a fixed expression ([<span class="anti">ⲉⲃⲟⲗ</span>] <span class="anti">ϩⲛ</span>)</td>
+</tr>
+<tr>
+  <td>flat</td>
+  <td>non-initial part of a name ([<span class="anti">ⲁⲡⲁ</span>] <span class="anti">ⲡⲟⲓⲙⲏⲛ</span>)</td>
+</tr>
+<tr>
+  <td>iobj</td>
+  <td>indirect object in possession ([<span class="anti">ⲟⲩⲛⲧ</span>]<span class="anti">ϥ</span> [<span class="anti">ϭⲟⲙ</span>])</td>
+</tr>
+<tr>
+  <td>mark</td>
+  <td>subordinating or clause-introducing conjunction (<span class="anti">ⲉⲣⲉ</span>, <span class="anti">ϫⲉ</span>)</td>
+</tr>
+<tr>
+  <td>nmod</td>
+  <td>adnominal prepositional phrase ([<span class="anti">ⲙⲁ</span> <span class="anti">ⲛ</span>] <span class="anti">ϣⲱⲡⲉ</span>, [<span class="anti">ⲟⲩ</span> <span class="anti">ⲣⲱⲙⲉ</span> <span class="anti">ϩⲓ</span> <span class="anti">ⲡ</span>] <span class="anti">ϫⲁⲉⲓⲉ</span>)</td>
+</tr>
+<tr>
+  <td>nsubj</td>
+  <td>nominal subject (<span class="anti">ϥ</span>[<span class="anti">ⲥⲱⲧⲙ</span>], [<span class="anti">ⲡ</span>]<span class="anti">ⲏⲓ</span> [<span class="anti">ⲕⲏⲧ</span>])</td>
+</tr>
+<tr>
+  <td>nummod</td>
+  <td>numeric modifier ([<span class="anti">ⲣⲱⲙⲉ</span>] <span class="anti">ⲥⲛⲁⲩ</span>, <span class="anti">ϣⲟⲙⲛⲧ</span> [<span class="anti">ⲛϩⲟⲟⲩ</span>])</td>
+</tr>
+<tr>
+  <td>obj</td>
+  <td>direct object ([<span class="anti">ⲥⲟⲧⲡ</span>]<span class="anti">ϥ</span>, [<span class="anti">ⲙⲙⲟ</span>]<span class="anti">ϥ</span>)</td>
+</tr>
+<tr>
+  <td>obl</td>
+  <td>oblique/adverbial prepositional phrase ([<span class="anti">ⲛⲁⲩ</span> <span class="anti">ⲉⲣⲟ</span>]<span class="anti">ϥ</span>, [<span class="anti">ϩⲙ</span> <span class="anti">ⲡ</span>]<span class="anti">ⲏⲓ</span>)</td>
+</tr>
+<tr>
+  <td>obl:npmod</td>
+  <td>oblique noun phrase ([<span class="anti">ⲡ</span>]<span class="anti">ⲟⲩⲁ</span> [<span class="anti">ⲡⲟⲩⲁ</span>])</td>
+</tr>
+<tr>
+  <td>orphan</td>
+  <td>links arguments whose joint head is elliptical</td>
+</tr>
+<tr>
+  <td>parataxis</td>
+  <td>additional phrase head without explicit coordination ([<span class="anti">ⲁϥⲃⲱⲕ</span> <span class="anti">ⲁϥ</span>]<span class="anti">ⲛⲁⲩ</span> )</td>
+</tr>
+<tr>
+  <td>punct</td>
+  <td>punctuation (., <span class="anti">⳾</span>)</td>
+</tr>
+<tr>
+  <td>reparandum</td>
+  <td>marks head of erroneous or dysfluent material</td>
+</tr>
+<tr>
+  <td>root</td>
+  <td>main predicate (<span class="anti">ⲡⲉϫⲉ</span>, <span class="anti">ⲥⲱⲧⲙ</span>)</td>
+</tr>
+<tr>
+  <td>vocative</td>
+  <td>used in appellations ([<span class="anti">ⲱ</span> <span class="anti">ⲡ</span>]<span class="anti">ⲣⲱⲙⲉ</span>)</td>
+</tr>
+<tr>
+  <td>xcomp</td>
+  <td>external complement with shared object, usually infinitive/causative ([<span class="anti">ⲁϥⲃⲱⲕ</span> <span class="anti">ⲉ</span>]<span class="anti">ⲛⲁⲩ</span>, [<span class="anti">ⲉⲧⲣⲉϥ</span>]<span class="anti">ⲥⲱⲧⲙ</span>)</td>
+</tr>
+</tbody>
+</table>
+
+<h2 class="tutorial-h2" id="frequencies">Frequencies</h2>
+
+<p>Once a query has been formulated, we can select <strong>More -> Frequencies</strong> to get a frequency breakdown of the values for the annotations we searched for. In such cases, it often makes sense to leave some annotation values unspecified. For example, we can look for a breakdown of all Greek origin words by specifying the language and asking for a lemma with no constraints:</p>
+
+<ul>
+<li><a href="https://annis.copticscriptorium.org/annis/scriptorium#_q=bGFuZz0iR3JlZWsiIF89XyBsZW1tYQ==&_c=Y29wdGljLnRyZWViYW5r&_bt=bm9ybV9ncm91cA&o=random" target="_new"><tt>lang="Greek" _=_ lemma</li></tt></a></li>
+</ul>
+
+<p>This will match any lemma with Greek language, and the frequency breakdown will provide counts for each type.</p>
+
+<p><img src="img/freqs1.png" style="width: 400px" alt="frequency query" title="frequency query" />
+<img src="img/freqs2.png" style="width: 400px" alt="frequency breakdown" title="frequency breakdown" /></p>
+
+<p>Alternatively, we can download all results matching this query using the CSV exporter by selecting <strong>More -> Export</strong>, then clicking <strong>Perform Export</strong> and finally using <strong>Download</strong> when the export is ready. For more information on different export formats, see <a href="http://korpling.github.io/ANNIS/3.6/user-guide/aql-export.html">the ANNIS documentation</a>.</p>
+
+<h2 class="tutorial-h2" id="more">More</h2>
+
+<ul>
+<li>For more information on the Scriptorium tag set, see <a href="https://github.com/CopticScriptorium/tagger-part-of-speech/blob/master/scriptorium_tagset_documentation.pdf">tagging guidelines</a></li>
+<li>Lemmatization practices are documented <a href="https://raw.githubusercontent.com/CopticScriptorium/tagger-part-of-speech/master/Coptic%20SCRIPTORIUM%20lemmatization%20guidelines.pdf">here</a></li>
+<li>Syntactic parsing guidelines are part of the <a href="https://universaldependencies.org/cop/dep/">Coptic Universal Dependencies Documentation</a> project</li>
+<li>Entity tagging guidelines are <a href="https://raw.githubusercontent.com/CopticScriptorium/entity-tagging/master/coptic_scriptorium_entity_guidelines.pdf">here</a></li>
+<li>For a complete list of ANNIS operators, see <a href="http://korpling.github.io/ANNIS/3.6/user-guide/aql-operators.html">the ANNIS documentation</a>. </li>
+</ul>
+</div></section></body>
+</html>
